@@ -1,0 +1,1595 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+	background-color:#FFF;
+	font-size:16px;
+	overflow-x: hidden;
+	line-height: 27px;
+    margin: 0px;
+}
+
+input:not([type="image" i]), textarea {
+    box-sizing: border-box;
+}
+
+input, textarea, select, button {
+     font-family: 'Montserrat', sans-serif!important;
+	font-size:16px!important;
+}
+
+html {
+}
+
+p {
+		font-size:16px;
+		line-height: 27px;
+		font-family: 'Montserrat', sans-serif;
+}
+.alphaSort{
+    list-style: none;
+    display: inline-block;
+
+    /* One most likely needs to realign flow content */
+    text-align: initial;
+}
+.sortLi{
+    float: left;
+    border: 1px solid #000;
+    padding: 5px 7px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+.sortLi a{
+    text-decoration: none;
+    color:black;
+}
+
+li.sortLi::before {
+    display:none;
+}
+
+textarea.contactForm {
+    font-size: 20px;
+}
+
+input.dob {
+    text-align: center!important;
+    color: #777;
+    padding-left: 60px!important;
+}
+
+.btn {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px; !important;
+    border: 0px;
+    background-color: #e8541c;
+    color: #fff;
+    padding: 14px 0px 14px 10px;
+    background-image: url(https://www.emerdency.co.uk/images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 94%;
+    background-size: 35px;
+    display: inline-block;
+    margin-bottom: 25px;
+	cursor: pointer;
+}
+
+.btnappointment {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px; !important;
+    border: 0px;
+    background-color: #e8541c;
+    color: #fff;
+    padding: 14px 0px 14px 10px;
+    background-image: url(https://www.emerdency.co.uk/images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 94%;
+    background-size: 35px;
+    display: inline-block;
+    margin-bottom: 0px;
+	cursor: pointer;
+}
+
+.desktop {display:block;}
+.mobile {display:none;}
+
+.btnappointment:hover {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px; !important;
+    border: 0px;
+    background-color: #fb4602;
+    color: #fff;
+    padding: 14px 0px 14px 10px;
+    background-image: url(https://www.emerdency.co.uk/images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 94%;
+    background-size: 35px;
+    margin-bottom: 0px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease 0s;; /* Safari */
+    transition: all 0.3s ease 0s;
+}
+
+.btnreview {
+    width: 80%;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 18px; !important;
+    border: 0px;
+    background-color: #292930;
+    color: #ffffff;
+    padding: 14px 0px 14px 10px;
+    background-image: url(https://www.emerdency.co.uk/images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 94%;
+    background-size: 35px;
+    display: inline-block;
+    margin-bottom: 5px;
+	cursor: pointer;
+}
+
+.btnreview:hover {
+    width: 80%;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 18px; !important;
+    border: 0px;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 14px 0px 14px 10px;
+    background-image: url(https://www.emerdency.co.uk/images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 94%;
+    background-size: 35px;
+    display: inline-block;
+    margin-bottom: 5px;
+	cursor: pointer;
+		-webkit-transition: all 0.3s ease 0s;; /* Safari */
+    transition: all 0.3s ease 0s;
+}
+
+.btn-tel {
+    width: 98%;
+    text-align: left;
+    font-size: 18px;
+    border: 0px;
+    background-color: #e8541c;
+    color: #fff;
+    padding: 10px 0px 10px 10px;
+    background-image: url(https://www.emerdency.co.uk/images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 94%;
+    background-size: 35px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+a.btn.review {
+    width: 102%;
+}
+input.btn.book {
+    padding: 20px 0px 20px 10px;
+}
+
+.greyback {
+    background: #cfcfcf!important;
+	padding: 0px!important;
+	padding-bottom:20px!important;
+}
+
+ul.appointmentlist {
+    background-color: #cfcfcf;
+    color: #323232;
+    padding: 10px!important;
+    margin-bottom: 25px;
+}
+
+ul.appointmentlist.account {
+    min-height: 350px;
+}
+
+ul.appointmentlist.account.tel {
+    min-height: 200px;
+}
+
+ul.dentistlist {
+    background-color: #2A2930;
+    color: #fff;
+    padding: 25px!important;
+    margin-bottom: 25px;
+    min-height: 250px;
+}
+
+.btn.back {
+    background-image: url(https://www.emerdency.co.uk/images/arrow-back.png);
+    max-width: 150px;
+    background-color: #2A2930;
+    text-align: center;
+    margin-right: 10px;
+    background-position: 10px;
+}
+
+.btn.black {
+    background-color: #2A2930;
+}
+.black a:hover{
+	color: #e8541c;
+	background-color:transparent;
+}
+.error {
+	color: #e8541c;
+	font-weight:lighter;
+}
+
+.form-holder {
+    background-color: #f2f2f2;
+    padding: 1px 30px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+.form-holder2 {
+    background-color: #f2f2f2;
+    padding: 1px 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+input.postcode::placeholder {
+    padding-left: 5px;
+}
+
+
+select.distance {
+    height: 44px;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 0px!important;
+    width: 103.3%;
+    color: grey;
+    /*margin: 10px 0px;
+    padding: 10px 10px;*/
+}
+select.customSelect {
+    height: 44px;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 0px!important;
+    width: 100%;
+    color: grey;
+    margin: 10px 0px;
+    padding: 10px 10px;
+    text-align-last:center;
+}
+select.customSelect.black {
+    color: black;
+}
+select.patientSelect {
+    height: 30px;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 0px!important;
+    width: 25%;
+    color: black;
+    margin: 5px 0px;
+    padding: 5px 5px;
+    text-align-last:center;
+}
+
+input.btn.selectBtn {
+    width: 25%;
+}
+
+input.btn.selectBtn2 {
+    width: 100%;
+}
+
+img.imgProcess {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.text-centre {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.orange-text {
+    color: #e8541c;
+}
+
+h3.underline {
+    text-decoration: underline;
+}
+
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #292930;
+    color: #ffffff;
+}
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: #292930 !important;
+    color: #ffffff;
+}
+a.footer-link {
+    padding-top: 10px;
+}
+
+label.regCheck {
+    padding-left: 30px;
+    padding-left: 30px;
+    display: block;
+}
+
+input.reg-check {
+    float: left;
+}
+
+.col-2.first {
+    padding-right: 15px !important;
+}
+
+.contact-form .col-2 {
+    width: 49%;
+    padding: unset;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    select.distance {
+        width: 105%;
+    }
+    .btn.selectBtn {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 18px;
+        background-color: #e8541c;
+        color: #fff;
+        padding: 7px 0px 4px 10px;
+        background-repeat: no-repeat;
+        background-position: 94%;
+        background-size: 35px;
+        display: inline-block;
+        margin-bottom: 25px;
+    }
+}
+
+.appointment-form select.distance {
+    width: 100%;
+}
+
+input.postcode::placeholder {
+    color: grey;
+}
+
+
+input[type="number"], input[type="text"], input[type="password"], input[type="date"], input[type="email"], input[type="tel"]  {
+    margin: 10px 0px;
+    padding: 10px 0px;
+    font-size: 20px;
+    width: 100%;
+	text-align:center;
+}
+
+.form-holder input {
+	text-align:left;
+}
+
+
+.postcode, .distance {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+.page-title {
+	text-align: center;
+color: #fff;
+background-color: #292930;
+margin: 0px;
+padding: 30px;
+font-weight: lighter;
+}
+
+h1, h2, h3 {
+			line-height: 37px;
+
+	
+}
+
+
+a {
+	text-decoration:none;
+}
+ul {
+	margin:0px;
+	list-style: none
+	
+}
+.main-content li::before {
+	content: "•"; color: #e8541c;
+font-size: 19px;
+margin-right:10px;
+}
+li {
+	line-height:27px;
+	
+display: table-row;
+}
+
+li::before {
+    display: table-cell;
+    width: 15px;
+}
+h3 {
+	margin:0px;
+	font-weight:lighter;
+}
+
+h1 {
+		font-size:36px;
+
+	
+}
+h2 {
+	color:#e8541c;
+	font-weight:lighter;
+	font-size:26px;
+	
+	
+}
+
+.main-content {
+	min-height:300px;
+}
+.main-content ul {
+	padding-left:0px;
+}
+.top-bar {
+    background-color: #e8541c;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+	text-transform:uppercase;
+}
+.header {
+	background-color:#292930;
+	display: inline-block;
+width: 100%;
+padding-top: 15px;
+}
+.inner-row {
+		max-width:1120px;
+		margin:auto;
+		padding-left:20px;
+		padding-right:20px;
+}
+.logo {
+	float:left;
+}
+.logo-centre {
+	text-align: center;
+}
+.main-navigation {
+	float:left;
+	width:100%;
+}
+.login-wrapper {
+    float: right;
+    width: 60%;
+    text-align: right;
+		margin-top: 58px;
+
+}
+.sm-btns div {
+    float: right;
+    margin: 10px;
+}
+.login-wrapper a {
+margin-left: 20px;
+    min-width: 126px;
+    text-align: center;}
+.patient-login a {
+    color: #e8541c;
+    border: 3px solid #e8541c;
+    padding: 20px;
+    border-radius: 5px;
+    float: right;
+}
+.patient-login a:hover {
+    color: #fff;
+	background-color:#e8541c; 
+}
+.dentist-login a {
+    color: #fff;
+    border: 3px solid #fff;
+    padding: 20px;
+    border-radius: 5px;
+    float: right;
+  
+}
+.dentist-login a:hover {
+	    color: #e8541c;
+			background-color:#fff; 
+	
+}
+.register a,.confirm a {
+    color: #fff;
+    border: 3px solid #e8541c;
+    padding: 20px;
+    border-radius: 5px;
+    float: right;
+ 
+	background-color:#e8541c;
+}
+.register a:hover, .confirm a:hover {
+		    color: #e8541c;
+			background-color:transparent;	
+}
+
+
+.main-navigation ul li {
+    list-style: none;
+    float: left;
+    margin: 14px 23px;
+}
+.main-navigation a {
+	color:#FFF;
+}
+
+.main-navigation {
+	background-color:#e8541c;
+}
+.main-navigation ul {
+	margin:0px;
+}
+
+.main-navigation {
+	margin-top: 30px;
+}
+
+.col-2 {
+	width: 47%;
+float: left;
+padding: 0px 8px 0px 8px;
+}
+
+.col-2-button {
+	width: 45%;
+float: left;
+padding: 0px 8px 0px 8px;
+}
+
+.col-3 {
+	width: 30%;
+float: left;
+padding: 0px 8px 0px 8px;
+}
+
+.col-33 {
+	width: 65%;
+float: left;
+padding: 0px 15px 0px 15px;
+}
+
+.specials-wrap .col-3 {
+	padding: 0px 37px 0px 0px;
+	
+}
+.row {
+    width: 100%;
+    display: inline-block;
+	padding: 40px 0px;
+}
+.orange {
+	background-color:#e8541c;
+	color:#FFF;
+}
+.hero-shot {
+	background-image:url(https://www.emerdency.co.uk/images/hero-bg.jpg);
+	background-repeat:no-repeat;
+	padding-top:50px;
+        border-bottom:10px solid #e8541c;
+    background-size: cover;
+    background-position: center center;
+}
+.hero-text {
+    text-align: left!important;
+    float: left;
+    color: #fff;
+    margin-top: 25px;
+    font-size: 42px;
+    text-align: right;
+    font-weight: lighter;
+	padding-bottom:25px;
+	    margin-left: 65px;
+		line-height:50px;
+}
+.inner-row {
+}
+.no-padding {
+	padding:0px;
+}
+.second-line {
+    margin-left: 70px;
+}
+.third-line {
+    margin-left: 117px;
+}
+.small-padding {
+	padding-left:15px;
+}
+.shift-right {
+	    margin-left: 150px;
+}
+.specials {
+text-align:center;font-size: 33px;
+margin-top: 15px;
+}
+.slash {
+	background-image:url(https://www.emerdency.co.uk/images/slash.png);
+	background-repeat:no-repeat;
+	background-position:right;
+}
+.orange {
+	margin-top:20px;
+}
+.error-code {
+    font-size: 299px;
+    text-align: center;
+    line-height: 1;
+}
+.error-code-text {
+    text-align: center;
+}
+
+.col-2.buttons {
+    width: 45%;
+}
+.col-2.rate {
+    width: 30%;
+    min-height: 81px;
+    text-align: left;
+
+}
+
+.col-2.title {
+    width: 50%;
+}
+
+.col-2.title h2 {
+    font-size: 20px;
+}
+
+.adminAppt {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.adminAppt td, .adminAppt th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.adminAppt tr:nth-child(even){background-color: #f2f2f2;}
+
+.adminAppt tr:hover {background-color: #ddd;}
+
+.adminAppt th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #e8541c;
+    color: white;
+}
+a.btn.back.next {
+    background-image: url(https://www.emerdency.co.uk/images/arrow.png);
+    float: right;
+}
+
+ul.appointmentlist.confirmation {
+    min-height: 250px;
+}
+ul.appointmentlist.select {
+    min-height: 400px;
+}
+
+ul.appointmentlist.confirmation.tel {
+    min-height: 125px;
+}
+
+ul.appointmentlist.confirmation.thank.tel {
+    min-height: 200px;
+}
+
+ul.appointmentlist.details {
+    min-height: 200px;
+}
+
+ul.appointmentlist.patient {
+    min-height: 275px;
+}
+
+ul.appointmentlist.details.patient-account {
+    min-height: 275px;
+}
+
+h2.important {
+    line-height: 0px;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+input.center {
+    display: block;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+
+
+b.orange-dash {
+    color: #e8541c;
+}
+
+input.no-arrow {
+    background-image: none;
+}
+
+a.no-arrow {
+    background-image: none;
+}
+
+.register-checkbox {
+    line-height: 16px;
+}
+
+.dashed-list {
+    padding-left: 1.5em;
+    text-indent: -0.9em;
+}
+
+button#nextBtn {
+    width: 100%;
+	max-width:160px;
+}
+
+button#prevBtn {
+    width: 100%;
+	max-width:160px;
+    text-align: center;
+    background-image: url(https://www.emerdency.co.uk/images/arrow-back.png);
+    background-position: 10px;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+    background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+    display: none;
+
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+    opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+    background-color: #e8541c;
+}
+
+
+@media only screen and (min-width: 1050px) {
+    .menu-icon {
+        display: none;
+    }
+
+    .sidenav {
+        display: none;
+    }
+
+    .col-3.address {
+        max-width: 30%;
+    }
+
+    .col-3-row {
+        min-height: 140px;
+    }
+
+    .quote {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .col-3.access {
+        width: 100%;
+    }
+}
+
+ul.privacy h3 {
+    padding-top: 10px;
+}
+
+.contact-details {
+    float: left!important;
+    padding-left: 150px;
+    color: #e8541c;
+    text-decoration: none;
+}
+
+.contact-details a {
+    text-decoration: none!important;
+    color: #e8541c!important;
+}
+
+@media only screen and (max-width: 1050px) {
+
+    body {
+        line-height: 44px; !important;
+        font-size: 35px; !important;
+    }
+
+    p {
+        font-size: 26px;
+        line-height: 35px;
+    }
+
+    h2 {
+        font-size: 45px;
+        line-height: 54px;
+    }
+
+    iframe.youtube {
+        width: 100%;
+        height: 400px;
+    }
+
+    .col-1 {
+        padding: 0 20px;
+    }
+
+    .specials-wrap .col-3 {
+        padding: 0px;
+    }
+    .top-bar {
+        font-size: 11px;
+    }
+    .top-bar.home {
+        font-size: 30px;
+    }
+    .top-bar.index {
+        font-size: 29px;
+    }
+    .dentist-login.long a {
+        font-size: 32px;
+    }
+    select.customSelect {
+        height: 81px;
+    }
+    input, textarea, select, button {
+        font-size:48px!important;
+    }
+
+    input[type="number"], input[type="text"], input[type="password"], input[type="date"], input[type="email"], input[type="tel"] {
+           margin: 20px 0px;
+    padding: 20px 0px;
+    width: 100%;
+	text-align:center;
+	box-sizing: border-box;
+	border: 2px solid #555555;
+	background-color: #cfcfcf;
+    }
+	
+    input[type="number"]:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
+		background-color: lightblue;
+		border: 3px solid #000000;
+    }
+
+    select.distance {
+        height: 80px;
+    }
+    select.patientSelect {
+        height: 65px;
+        width: 45%;
+    }
+
+    label {
+        font-size: 42px;
+    }
+	
+
+    a.btn-tel {
+        font-size: 30px;
+    }
+    a.btn.review {
+        width: 98.5%;
+    }
+
+    a.btn {
+        font-size: 30px; !important;
+    }
+    .btn.back {
+        max-width: 200px;
+    }
+    input.paypal-btn {
+        height: 135px;
+    }
+
+    .col-1.register-lightbox {
+        width: 95%;
+        position: absolute;
+        left: 45%;
+        margin-left: -44.5%;
+    }
+
+    body.fancybox-active {
+        position: fixed;
+    }
+
+    ul.appointmentlist.confirmation.tel {
+        min-height: 650px;
+    }
+    ul.appointmentlist.confirmation {
+        font-size: 24px;
+        line-height: 33px;
+        min-height: 950px;
+    }
+    ul.appointmentlist.confirmation h2 {
+        font-size: 48px;
+        line-height: 57px;
+    }
+
+    ul.appointmentlist.select {
+        min-height: 1250px;
+    }
+
+    ul.appointmentlist.confirmation.thank {
+        min-height: 1150px;
+    }
+
+    ul.appointmentlist.confirmation.thank.tel {
+        min-height: 700px;
+    }
+
+    ul.appointmentlist.account {
+        min-height: 1300px;
+    }
+
+    ul.appointmentlist.account.tel {
+        min-height: 775px;
+    }
+
+    ul.appointmentlist.details {
+        min-height: 750px;
+    }
+
+    ul.appointmentlist.patient {
+        min-height: 1200px;
+    }
+
+    ul.appointmentlist.details.patient-account {
+        min-height: 950px;
+    }
+
+
+    ul.appointmentlist.dentist {
+        font-size: 16px;
+    }
+
+    h4.orange-text.telh4 {
+        line-height: 0px;
+    }
+
+    input.btn.selectBtn {
+        width: 20%;
+        text-align: left;
+    }
+    select.patientSelect {
+        height: 65px;
+        width: 35%;
+        font-size: 24px;
+        font-size: 24px !important;
+    }
+
+    ul.fees {
+        font-size: 28px;
+        /*line-height: 25px;*/
+    }
+
+    ul.fees li {
+        border-bottom: 1px solid;
+        margin-bottom: 1px;
+        border-bottom-color: #e8541c;
+    }
+
+    .dashed-list {
+        padding-left: 1.5em;
+        text-indent: -0.5em;
+    }
+
+    .patient-login {
+        padding-left: 5px;
+        padding-right: 15px;
+    }
+
+    .treatments {
+        font-size: 26px;
+    }
+
+    .privacy {
+        font-size: 20px;
+    }
+    .register-checkbox {
+        line-height: 25px;
+    }
+
+    label.regCheck {
+        font-size: 32px;
+		line-height:48px;
+    }
+
+    .details-list h3 {
+        font-weight: normal;
+    }
+
+    .col-2.register-page {
+        text-align: left;
+    }
+
+    ul.dentistList {
+        min-height: 400px;
+    }
+
+    .col-2.rate {
+        width: 100%;
+        min-height: unset;
+    }
+
+    .col-2.buttons {
+        padding-left: 10px;
+        width: 48%;
+    }
+    /* The side navigation menu */
+    .sidenav {
+        height: 50%; /* 100% Full-height */
+        min-height: 1000px;
+        width: 0; /* 0 width - change this with JavaScript */
+        position: absolute; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 845px;
+        left: 0;
+        background-color: #292930; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+
+    .sidenav a {
+        padding: 40px;
+        text-decoration: none;
+        font-size: 40px;
+        color: #e8541c;
+        display: block;
+        transition: 0.3s;
+        line-height: 40px;
+    }
+
+    /* The navigation menu links
+    .sidenav a {
+        padding: 40px;
+        text-decoration: none;
+        font-size: 52px;
+        color: #e8541c;
+        display: block;
+        transition: 0.3s;
+        line-height: 50px;
+    }*/
+
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: -25px;
+        right: -50px;
+        font-size: 150px;
+        margin-left: 50px;
+    }
+    .sidenav.internal {
+        top: 670px;
+    }
+    img.menu-icon {
+        float: left;
+        padding-left: 30px;
+        padding-bottom : 20px
+    }
+
+    input[type='radio'] {
+        transform: scale(1.5);
+    }
+    input[type='checkbox'] {
+        transform: scale(4.5);
+    margin: 20px;
+    }
+
+    .hero-shot {
+        background-size: cover!important;
+        background-attachment: fixed;
+        background-position: top center!important;
+        background-image: url(https://www.emerdency.co.uk/images/hero-bg-mob.jpg);
+}
+
+    .logo {
+    float: none;
+    text-align: center;
+    }
+
+
+    .slash {
+        background-image:none;
+    }
+    .shift-right {
+        margin-left: 0px;
+        margin-bottom:25px;
+    }
+    .login-wrapper {
+        margin-top: 40px;
+        width:100%;
+        text-align:center;
+        margin-bottom:0px;
+        padding-bottom: 15px;
+    }
+
+    .login-wrapper div {
+        display:inline-block;
+    }
+
+    .dentist-login a, .register a, .patient-login a {
+        float: none;
+        padding: 18px 70px;
+        width: 320px;
+        margin: auto;
+        margin-bottom: auto;
+        display: inline-block;
+        margin-bottom: 15px;
+
+    }
+    .confirm a {
+        float: none;
+        padding: 16px 70px;
+        width: 400px;
+        margin: auto;
+        margin-bottom: auto;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .col-2, .col-3, .col-33 {
+        width: 100%;
+        padding: 0px;
+        text-align:center;
+    }
+    .main-navigation {
+        display: none;
+    }
+    .hero-shot {
+        background-size: contain;
+        padding-top:0px;
+    }
+    .hero-text {
+        display:none;
+    }
+    li {
+        list-style: none !important;
+        line-height: 50px !important;
+        display:block;
+    }
+    .main-content li::before {
+        content:normal;
+    }
+    ul {
+        margin-left: 0px!important;
+        padding: 0px!important;
+    }
+    .footer {
+        text-align:center;
+    }
+    .main-navigation ul li {
+        list-style: none;
+        float: none;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin: 10px 0px;
+    }
+
+    .dhx_cal_light.dhx_cal_light_wide label {
+        font-size: 16px; !important;
+    }
+
+    .dhx_cal_light.dhx_cal_light_wide.dhx_cal_larea input, .dhx_cal_light.dhx_cal_light_wide.dhx_cal_larea textarea, .dhx_cal_light.dhx_cal_light_wide.dhx_cal_larea select {
+        font-size: 16px !important;
+    }
+
+    .dhx_cal_ltext textarea, .dhx_cal_ltext select, .dhx_cal_ltext textarea input {
+        font-size: 16px !important;
+    }
+    .dhx_section_time select {
+        font-size: 16px !important;
+    }
+
+    iframe {
+
+        margin-bottom: 35px;
+        margin-top: 35px;
+
+    }
+    .sm-btns {
+        text-align: center;
+    }
+    .sm-btns div {
+        float: none;
+        margin: auto;
+        text-align: center;
+        display: inline-block;
+    }
+
+    ul.privacy h3 {
+       font-size: 32px;
+    }
+
+    .contact-details {
+        display: none!important;
+    }
+    .blog-thumb {
+        display: none;
+    }
+
+    .footer-logo {
+        text-align: center!important;
+    }
+}
+.dhx_cal_tab {
+
+    border: 1px solid #e8541c!important;
+    color: #e8541c!important;
+    width: 87px; !important;
+}
+.dhx_cal_tab.active {
+    color: #fff!important;
+}
+.dhx_cal_ltitle {
+
+    border-bottom: 1px solid #e8541c!important;
+    background: #e8541c!important;
+
+}
+.dhx_cal_qi_title {
+
+      background: #e8541c!important;
+
+}
+.dhx_btn_set, .dhx_cancel_btn_set, .dhx_cal_today_button, .dhx_qi_big_icon {
+
+    color: #e8541c!important;
+
+}
+.dhx_btn_set:hover, .dhx_cancel_btn_set:hover, .dhx_cal_today_button:hover, .dhx_qi_big_icon:hover, .dhx_btn_set div:hover {
+    background-color: #fff!important;
+    border: none;
+
+}
+.dhx_save_btn_set {
+    border: 1px solid #fff!important;
+
+    background-color: #fff!important;
+}
+
+.dhx_cal_event_clear {
+    color: #e8541c !important;
+}
+
+.dhx_cal_navline {
+    font-family: 'Montserrat', sans-serif; !important;
+}
+
+div#scheduler_here {
+    font-family: 'Montserrat', sans-serif; !important;
+}
+
+.dhx_cal_quick_info {
+    font-family: 'Montserrat', sans-serif; !important;
+}
+
+.dhx_cal_event_clear.dhx_cal_event_line_start.dhx_cal_event_line_end {
+    font-family: 'Montserrat', sans-serif; !important;
+}
+.dhx_cal_navline .dhx_cal_date {
+    font-family: 'Montserrat', sans-serif; !important;
+}
+.dhx_cal_light.dhx_cal_light_wide {
+    font-family: 'Montserrat', sans-serif; !important;
+}
+.dhx_cal_light {
+    font-family: 'Montserrat', sans-serif; !important;
+}
+
+label {
+    font-family: 'Montserrat', sans-serif;  !important;
+}
+
+a[href^="tel:"] {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: #0000b3/* Inherit text color of parent element. */
+    /* Additional css `propery: value;` pairs here */
+}
+
+.dhtmlx_popup_button div {
+    color: #e8541c;
+}
+
+.dhtmlx_button input:active, .dhtmlx_button input:focus, .dhtmlx_popup_button div:active, .dhtmlx_popup_button div:focus {
+    color: #e8541c;
+}
+
+
+.dhtmlx_popup_button.dhtmlx_ok_button div {
+    background: #e8541c;
+    border: 1px solid #e8541c;
+}
+
+.dhx_cal_ltext textarea,.dhx_cal_ltext select {
+    font-size: 15px!important;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .dhx_section_time select.dhx_lightbox_time_select {
+        width: 85px;
+    }
+}
+
+.phonenumber {
+	/* display:block;
+	float: right;
+	color:#ffffff;
+	font-size:22px;
+	margin-top:20px; */
+	display:none;
+}
+
+.phonenumber a {
+	text-decoration:none;
+}
+
+span.post-meta {
+    color: grey;
+    padding-right: 50px;
+    font-size: 14px;
+}
+
+img.blog-hero {
+    height: 500px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1050px) {
+.phonenumber {
+	display:block;
+	width:100%;
+	text-align:center!important;
+	float: none!important;
+	color:#e8541c!important;
+	font-size:36px!important;
+	margin-top:20px;
+}
+.phonenumber a[href^="tel:"]{
+    color:#e8541c!important;
+}
+
+button#nextBtn {
+    width: 100%;
+	max-width:280px;
+}
+
+button#prevBtn {
+    width: 100%;
+	max-width:280px;
+    text-align: center;
+    background-image: url(https://www.emerdency.co.uk/images/arrow-back.png);
+    background-position: 10px;
+}
+
+}
+
+ul.breadcrumbs {list-style:none; list-style-type: none; padding:0px; margin:0px;}
+
+ul.breadcrumbs li {list-style:none; list-style-type: none; display:inline-block; font-size:12px;}
+ul.breadcrumbs li:before {list-style:none; list-style-type: none; display:inline-block;     
+	content: ">>";
+    color: #e8541c;
+    font-size: 12px;
+    margin-right: 10px;}
+	
+.appointmenttitle {
+	/* background:#f7b733; */
+	background:#cfcfcf;
+	color:#000000;
+	padding:15px;
+}
+
+.appointmenttitle h3 {
+	font-weight:bold;
+}
+
+.appointmenttitle h3 strong {
+	text-decoration:underline;
+	text-decoration-color:#e8541c;
+}
+
+.formtitle {
+	background:#4abdac;
+	color:#ffffff;
+	padding:15px;
+}
+
+.bigprice {
+	/* background:#4abdac; */
+	background:#292930;
+	-webkit-clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+	width:218px;
+	padding:10px;
+	font-size:24px;
+	color:#ffffff;
+	font-weight:bold;
+	text-align:center;
+	margin-top:5px;
+}
+
+.fulladdress {
+	padding:5px 10px 5px 10px;
+    background:#292930;
+    color:#ffffff;
+    margin-bottom:10px;
+}
+
+.footer-logo {
+    text-align: left;
+}
+
+@media only screen and (max-width: 1050px) {
+	ul.appointmentlist {
+    background-color: #cfcfcf;
+    color: #323232;
+    padding: 0px!important;
+    margin-bottom: 25px;
+	margin-left:10px!important;
+		margin-right:10px!important;
+}
+	
+	.appointmenttitle {
+	background:#f7b733;
+	color:#ffffff;
+	padding:25px;
+}
+
+.bigprice {
+    background: #4abdac;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98%);
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98%);
+    width: 98%;
+    padding: 10px;
+    font-size: 38px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 25px;
+}
+.btnappointment {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 48px!important;
+    border: 0px;
+    background-color: #e8541c;
+    color: #fff;
+    padding: 34px 0px 34px 10px;
+    background-image: url(https://www.emerdency.co.uk/images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 94%;
+    background-size: 35px;
+    display: inline-block;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.desktop {display:none;}
+.mobile {display:block;}
+
+.btnappointment:hover {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px; !important;
+    border: 0px;
+    background-color: #fb4602;
+    color: #fff;
+    padding: 34px 0px 34px 10px;
+    background-image: url(https://www.emerdency.co.uk/images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 94%;
+    background-size: 35px;
+    display: inline-block;
+    margin-bottom: 0px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease 0s;; /* Safari */
+    transition: all 0.3s ease 0s;
+}
+
+.btnreview {
+    display: none;
+}
+
+}
