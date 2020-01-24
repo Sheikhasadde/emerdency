@@ -2,14 +2,50 @@
 /* CSS Document */
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif,'Quicksand';
 	background-color:#FFF;
 	font-size:16px;
 	overflow-x: hidden;
 	line-height: 27px;
     margin: 0px;
 }
-
+h2,h1,h3,p{
+    font-family: Quicksand  !important;
+    font-weight: 100;
+}
+.instagram{
+    width: 30px;
+    height: 30px;
+    background-color: #2A2930;
+    border-radius: 180px;
+    padding: 5;
+}
+.instagram a{
+    font-size: 19px;
+    color:white;
+}
+.facebook{
+    width: 30px;
+    height: 30px;
+    background-color: #2A2930;
+    border-radius: 180px;
+    padding: 5;
+}
+.facebook a{
+    font-size: 19px;
+    color:white;
+}
+.twitter{
+    width: 30px;
+    height: 30px;
+    background-color: #2A2930;
+    border-radius: 180px;
+    padding: 5;
+}
+.twitter a{
+    font-size: 19px;
+    color:white;
+}
 input:not([type="image" i]), textarea {
     box-sizing: border-box;
 }
@@ -21,7 +57,13 @@ input, textarea, select, button {
 
 html {
 }
-
+.introline{
+    text-align: center;
+}
+.introline p {
+    padding-left: 10px;
+    font-family: Montserrat;
+}
 p {
 		font-size:16px;
 		line-height: 27px;
@@ -59,7 +101,39 @@ input.dob {
     color: #777;
     padding-left: 60px!important;
 }
-
+.services-box{
+    background-color: #E9531D;
+    margin: auto;
+    border-radius: 10px;
+    padding: 40px;
+}
+.services-box img{
+    margin: auto;
+    
+}
+.service-text{
+    color:white;
+    
+}
+.service-heading{
+    color:#E9531D;
+    font-size: 24px;
+}
+.service-number{
+    color:white;
+    font-size:50px;
+    font-weight: 900;
+   
+}
+.locationlist li{
+    font-size:26px; 
+    color:white;
+   
+}
+.locationlist li a{
+    color:white;
+    margin-top: 30px;
+}
 .btn {
     width: 100%;
     margin-top: 20px;
@@ -158,13 +232,27 @@ input.dob {
 
 .btn-tel {
     width: 98%;
-    text-align: left;
+    text-align: center;
     font-size: 18px;
     border: 0px;
     background-color: #e8541c;
     color: #fff;
+   border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: 94%;
+    background-size: 35px;
+    display: inline-block;
+
+}
+.btn-tel2 {
+    width: 98%;
+    text-align: center !important;
+    font-size: 18px;
+    border: 0px;
+    background-color: #2A2930;
+    color: #fff;
     padding: 10px 0px 10px 10px;
-    background-image: url(https://www.emerdency.co.uk/images/arrow.png);
+   border-radius: 10px;
     background-repeat: no-repeat;
     background-position: 94%;
     background-size: 35px;
@@ -228,17 +316,66 @@ ul.dentistlist {
 	color: #e8541c;
 	font-weight:lighter;
 }
-
+.process-shape{
+    
+    background:url('../images/shape.png');
+     background-repeat:no-repeat; 
+     background-size:35%;
+      height:200px;
+	background-position:center;
+}
+.process-icon{
+    background:url('../images/search.png'); background-repeat:no-repeat; background-size:20%; height:200px;
+			 background-position:center;
+}
+.process-icon-select{
+    background:url('../images/select.png'); background-repeat:no-repeat; background-size:20%; height:200px;
+			 background-position:center;
+}
+.process-icon-pay{
+    background:url('../images/payment.png'); background-repeat:no-repeat; background-size:20%; height:200px;
+			 background-position:center;
+}
+.process-icon-appointment{
+    background:url('../images/appointment.png'); background-repeat:no-repeat; background-size:20%; height:200px;
+			 background-position:center;
+}
+.form-heading
+{
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 42px;
+    font-family: Quicksand !important;
+    font-weight: 100 !important;
+    padding: 30px;
+}
+.form-holder-cont{
+    background:#E9531D;
+    padding: 1px 30px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    
+    color:white;
+    border-bottom-left-radius: 50px;
+}
 .form-holder {
-    background-color: #f2f2f2;
+    
     padding: 1px 30px;
     margin-top: -20px;
     margin-bottom: 20px;
 }
-.form-holder2 {
-    background-color: #f2f2f2;
+.form-holder-cont1{
+    background:#292931;
     padding: 1px 30px;
-    margin-top: 10px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    color:white;
+    border-top-right-radius: 50px;
+}
+.form-holder2 {
+    
+    
+    margin-top: -14px;
     margin-bottom: 20px;
 }
 input.postcode::placeholder {
@@ -348,6 +485,8 @@ h3.underline {
 }
 a.footer-link {
     padding-top: 10px;
+    color:white;
+    line-height: 3;
 }
 
 label.regCheck {
@@ -440,7 +579,7 @@ a {
 }
 ul {
 	margin:0px;
-	list-style: none
+	
 	
 }
 .main-content li::before {
@@ -497,13 +636,21 @@ width: 100%;
 padding-top: 15px;
 }
 .inner-row {
-		max-width:1120px;
+		width:100%;
 		margin:auto;
 		padding-left:20px;
 		padding-right:20px;
 }
 .logo {
-	float:left;
+  
+    float: left;
+    margin-top: -49px;
+    z-index: 9999;
+    position: absolute;
+}
+.logo img{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 .logo-centre {
 	text-align: center;
@@ -516,12 +663,41 @@ padding-top: 15px;
     float: right;
     width: 60%;
     text-align: right;
-		margin-top: 58px;
+		
 
 }
+
+.sub-footer{
+    font-size: 20px;
+    text-align: center;
+    color:white;
+    background-color: #E9531D;
+}
+.sub-footer p{
+    font-size:24px;
+}
+.footer-nav ul li a{
+    color:white;
+}
 .sm-btns div {
+    background-color: #2A2930;
     float: right;
-    margin: 10px;
+    margin-left: 10px;
+}
+.sm-btns-footer{
+    margin: auto;
+width:50%;
+    display: inline-block;
+}
+.sm-btns-footer div {
+    background-color: #E9531D;
+    float: left;
+    
+   margin-left: 20px;
+}
+.sm-btns-footer div a{
+    margin:auto;
+    padding:8px;
 }
 .login-wrapper a {
 margin-left: 20px;
@@ -530,7 +706,7 @@ margin-left: 20px;
 .patient-login a {
     color: #e8541c;
     border: 3px solid #e8541c;
-    padding: 20px;
+   
     border-radius: 5px;
     float: right;
 }
@@ -554,7 +730,7 @@ margin-left: 20px;
 .register a,.confirm a {
     color: #fff;
     border: 3px solid #e8541c;
-    padding: 20px;
+    
     border-radius: 5px;
     float: right;
  
@@ -569,21 +745,21 @@ margin-left: 20px;
 .main-navigation ul li {
     list-style: none;
     float: left;
-    margin: 14px 23px;
+    margin-left: 14px;
 }
 .main-navigation a {
 	color:#FFF;
 }
 
 .main-navigation {
-	background-color:#e8541c;
+	background-color:#2A2930;
 }
 .main-navigation ul {
 	margin:0px;
 }
 
 .main-navigation {
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 .col-2 {
@@ -617,31 +793,53 @@ padding: 0px 15px 0px 15px;
 .row {
     width: 100%;
     display: inline-block;
-	padding: 40px 0px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
 }
 .orange {
 	background-color:#e8541c;
 	color:#FFF;
 }
-.hero-shot {
-	background-image:url(https://www.emerdency.co.uk/images/hero-bg.jpg);
+.video-row{
+    padding: 70px;
+}
+.hero-overlay{
+    background-color: #e8541c78;
+    height: 100%;
+}
+.aboutus-img{
+    margin-top: 20px;
+    background-image:url(../images/groupab.png);
 	background-repeat:no-repeat;
-	padding-top:50px;
+    background-size: cover;
+    background-position: center center;
+}
+#abouttext ul{
+    list-style-type: square;
+}
+#abouttext ul li{
+    font-size: 18px;
+}
+.hero-shot {
+	background-image:url(../images/bg.png);
+	background-repeat:no-repeat;
+	
         border-bottom:10px solid #e8541c;
     background-size: cover;
     background-position: center center;
 }
 .hero-text {
-    text-align: left!important;
-    float: left;
+    
     color: #fff;
     margin-top: 25px;
     font-size: 42px;
-    text-align: right;
-    font-weight: lighter;
-	padding-bottom:25px;
-	    margin-left: 65px;
+   font-weight: 100;
+        font-family:Quicksand;
 		line-height:50px;
+}
+.hero-text-p{
+    color:#fff;
+    font-size: 18px;
 }
 .inner-row {
 }
@@ -861,7 +1059,7 @@ input.invalid {
 
     .col-3.access {
         width: 100%;
-    }
+    }   
 }
 
 ul.privacy h3 {
@@ -1193,7 +1391,7 @@ ul.privacy h3 {
         margin-bottom:25px;
     }
     .login-wrapper {
-        margin-top: 40px;
+        margin-top: 0px;
         width:100%;
         text-align:center;
         margin-bottom:0px;
@@ -1240,7 +1438,7 @@ ul.privacy h3 {
         display:none;
     }
     li {
-        list-style: none !important;
+       
         line-height: 50px !important;
         display:block;
     }
@@ -1411,12 +1609,9 @@ a[href^="tel:"] {
 }
 
 .phonenumber {
-	/* display:block;
-	float: right;
-	color:#ffffff;
-	font-size:22px;
-	margin-top:20px; */
-	display:none;
+	
+   margin-top: 5px;
+	
 }
 
 .phonenumber a {

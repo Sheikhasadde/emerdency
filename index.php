@@ -15,8 +15,10 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
 <?php $cityloc = "";?>
 <!DOCTYPE html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css"> 
+	<link rel="stylesheet" href="css/bootstrap3.css"> 
     <link rel="stylesheet" href="css/accept-cookies.css">
 
 	<title>Emerdency Dentists</title>
@@ -75,29 +77,48 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPQ3J8C"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-<div class="top-bar index">EMERGENCY DENTISTS <?php echo $cityloc ?> &middot; FIXED PRICE &middot; GDC CERTIFIED DENTISTS &middot; LIVE AVAILABILITY</div>
-<div class="header">
-	<div class="inner-row">
-		<div class="logo">
-			<a href="../"><img src="images/logo-web.jpg" width="403" height="199" alt="Emerdency - Emergency Dentist <?php echo $cityloc ?>" /></a>
-		</div>
-       
-        <div class="sm-btns">
-            <div class="instagram"><a href="https://www.instagram.com/emerdencyuk/"><img src="../images/instagram.png" width="45" height=45"/></a></div>
-            <div class="facebook"><a href="https://www.facebook.com/Emerdency-2055938214617610/"><img src="images/facebook-logo.png" width="45" height="45" alt="Facebook" /> </a> </div>
-            <div class="twitter"><a href="https://twitter.com/emerdency"><img src="images/twitter-logo.png" width="45" height="45" alt="Twitter"/></a></div>
-            <div class="contact-details">
+<div class="col-md-12 col-sm-12 hide-xs top-bar index">
+	
+<div class="col-md-6 phonenumber"><span class="glyphicon glyphicon-earphone"></span> &nbsp&nbsp&nbsp           07864 614 694  &nbsp &nbsp &nbsp
+<span class="glyphicon glyphicon-envelope"> </span>     &nbsp &nbsp &nbsp      info@emerdency.co.uk
+</div>
+<div class="col-md-6 sm-btns">
+            <div class="instagram"><a href="https://www.instagram.com/emerdencyuk/"><span class="fa fa-instagram"></span></a></div>
+            <div class="facebook"><a href="https://www.facebook.com/Emerdency-2055938214617610/"><span class="fa fa-facebook"></span> </a> </div>
+            <div class="twitter"><a href="https://twitter.com/emerdency"><span class="fa fa-twitter"></span></a></div>
+            <!-- <div class="contact-details">
                 <a href="tel:07864614694">07864 614 694</a><br/>
                 <a href="mailto:info@emerdency.co.uk">info@emerdency.co.uk</a>
-            </div>
+            </div> -->
         </div>
-        <div class="phonenumber">Call Now: <a href="tel:07864614694">07864 614 694</a><br/><a class="phonenumber" href="mailto:info@emerdency.co.uk">info@emerdency.co.uk</a></div>
+</div>
+<div class="header">
+	<div class="inner-row col-md-12">
+		<div class="logo col-md-2">
+			<a href="../"><img src="images/logo-web.jpg" width="200px" height="100px" alt="Emerdency - Emergency Dentist <?php echo $cityloc ?>" /></a>
+		</div>
+       
+        <div class="main-navigation col-md-6">
+			<ul>
+				<ul>
+					<li><a href="../" />HOME</a></li>
+					<li><a href="about.php" />ABOUT US</a></li>
+					<li><a href="fees.php" />FEES</a></li>
+					<li><a href="faq.php" >FAQs</a></li>
+					<li><a href="reviews.php" />REVIEWS</a></li>
+					<li><a href="contact-form.php" />CONTACT</a></li>
+					<li><a href="terms.php" />TERMS AND CONDITIONS</a></li>
+					<li><a href="blog.php" />BLOG</a></li>
+				</ul>
+			</ul>
+		</div>
+       
 		<?php
-		echo "<div class='login-wrapper'>";
+		echo "<div class='login-wrapper col-md-4'>";
 		switch ($_SESSION["loggedIn"]){
 			case "0" :
-				echo "<div class='patient-login'><a href='login.php' >PATIENT LOGIN</a></div>";
-				echo "<div class='dentist-login'><a href='dentist-login.php' >DENTIST LOGIN</a></div>";
+				echo "<div class='patient-login'><a href='login.php' >LOGIN</a></div>";
+				// echo "<div class='dentist-login'><a href='dentist-login.php' >DENTIST LOGIN</a></div>";
 				echo "<div class='register'><a href='register.php' >REGISTER</a></div>";
 				break;
 			case "1" :
@@ -126,8 +147,8 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
 				echo "<div class='register'><a href='pages/admin-account.php' >ADMIN ACCOUNT</a></div>";
 				break;
 			default:
-				echo "<div class='patient-login'><a href='login.php' >PATIENT LOGIN</a></div>";
-				echo "<div class='dentist-login'><a href='dentist-login.php' >DENTIST LOGIN</a></div>";
+				echo "<div class='patient-login'><a href='login.php' >LOGIN</a></div>";
+				// echo "<div class='dentist-login'><a href='dentist-login.php' >DENTIST LOGIN</a></div>";
 				echo "<div class='register'><a href='register.php' >REGISTER</a></div>";
 				break;
 		}
@@ -144,34 +165,56 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
             </div>";
 		echo "</div>";
 		?>
-		<div class="main-navigation">
-			<ul>
-				<ul>
-					<li><a href="../" />HOME</a></li>
-					<li><a href="about.php" />ABOUT US</a></li>
-					<li><a href="fees.php" />FEES</a></li>
-					<li><a href="faq.php" >FAQs</a></li>
-					<li><a href="reviews.php" />REVIEWS</a></li>
-					<li><a href="contact-form.php" />CONTACT</a></li>
-					<li><a href="terms.php" />TERMS AND CONDITIONS</a></li>
-					<li><a href="blog.php" />BLOG</a></li>
-				</ul>
-			</ul>
+		
+	</div>
+</div>
+<div class="introline">
+<p>EMERGENCY DENTISTS . FIXED PRICE . GDC CERTIFIED DENTISTS . LIVE AVAILABLITY</p>
+</div>
+<div class="main-content">
+
+	<div class="hero-shot row ">
+	<div class="hero-overlay col-md-12">
+		<div class="col-md-12 video-row">
+		<div class="col-md-6">
+		<h1><span class="hero-text"><span style="font-size: 52px;">Emergency</span> <br>Dental Care Within <br>Your Reach <?php echo $cityloc ?></span></h1>
+         <p class="hero-text-p">Emergency dental care at your fingertips</p>
+		</div>
+			<div class="col-md-6">
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal"><image src="images/playgroup.png" width="100%" height="100%"></image></button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog" style="z-index:99999999999 !important">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+     
+      <div class="modal-body">
+	  <iframe class="youtube" width="100%" height="500px" src="https://www.youtube.com/embed/zx4-mOiXqSE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+   
+			</div>
+
 		</div>
 	</div>
 </div>
-<div class="main-content">
-	<div class="hero-shot row">
-		<div class="inner-row">
-			<div class="col-2 home-video">
-                <iframe class="youtube" width="530" height="275" src="https://www.youtube.com/embed/zx4-mOiXqSE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                <h1><span class="hero-text"><strong>Emergency Dentist <?php echo $cityloc ?></strong></span></h1>
-                <h2><span class="hero-text">Emergency</br> <span class="second-line">dental care at</span> </br> <span class="third-line">your fingertips</span></span></h2>
-			</div>
+<div class="col-md-2"></div>
+<div class="col-md-8">
 
-			<div class="col-2">
-				<div class="form-holder">
-					<h2 style="margin-bottom:0px;">Appointment with a Dentist <?php echo $cityloc ?></h2>
+<div class="col-md-6 form-holder-cont">
+<div class="form-holder">
+			<h2 class="form-heading" >
+					Appointment with a Dentist <?php echo $cityloc ?> <br>
+
+					<span style="font-weight: 900; font-size:60px;"> &pound;50</span>
+			</h2>
 					<form class="appointment-form" method="post" action="<?php echo htmlspecialchars('php/search-NEW.php');?>">
 						<input class="postcode" type="text" name="postcode" placeholder="Postcode" required >
 						<select class="distance" name="distance" required>
@@ -184,26 +227,35 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
 						</select>
                         <label>Wheelchair access needed:</label> <label><input type="radio" name="disAccess" value="1" required >&nbsp;Yes</label>&nbsp;
 						<label><input type="radio" name="disAccess" value="0" checked="checked">&nbsp;No</label></br>
-						<input class="btn" type="submit" name="search" value="Next">
+						<input class="btn btn-tel2" type="submit" name="search" value="Next">
 					</form>
 				</div>
-                <div class="form-holder2">
-                    <h2>Telephone Consultation</h2>
+</div>
+<div class="col-md-6 form-holder-cont1">
+<div class="form-holder2">
+<h2 class="form-heading" >
+					Phone Consultation with a Dentist <?php echo $cityloc ?> <br>
+
+					<span style="font-weight: 900; font-size:60px;"> &pound;50</span> <br><br>
+					Emergency Consultation Care At your Fingerprint <?php echo $cityloc ?> <br>
+			</h2>
                     <a class="btn-tel" href="tel-search-results" name="tel-search" >Next</a>
                 </div>
-				<img src="images/price.png" width="100%" height="auto" alt="Emergency Dentist <?php echo $cityloc ?>"/>
+				<!-- <img src="images/price.png" width="100%" height="auto" alt="Emergency Dentist <?php echo $cityloc ?>"/> -->
 			</div>
-		</div>
-	</div>
-    
-	<div class="row no-padding">
-    <!-- New HP Content -->
-		<div class="inner-row">
-	           
-			<h1>Emergency Dental Care Within Your Reach</h1>
+</div>
 
-	        <p>Severe dental pain could be a serious condition that needs urgent attention and shouldn't be taken lightly. Emerdency dental service is designed to flawlessly relieve dental pain, swelling, bleeding, or even prevent your dental from deteriorating. Emerdency is the solution you've been waiting for!</p>
-			<p>Regardless of how cautious you are; dental emergencies can occur at any time. Whether you are having toothache, unusual sensitivity in your mouth, or a facial swelling, you will undoubtedly get the best emergency dental service that will help you alleviate your symptoms. Our emergency dental treatments have the following benefits:
+</div>
+<div class="col-md-2"></div>
+	<!-- New HP Content -->
+	
+	<div class="col-md-12 container">
+	<div class="col-md-1"></div>
+		<div class="col-md-7" id="abouttext">   
+			<h1 style="color:#292931; font-size:50px;" >Emerdency is there when <br> you need it</h1>
+	        <p style="color:#292931; font-size:18px" align="justify">Severe dental pain could be a serious condition that needs urgent attention and shouldn't be taken lightly. Emerdency dental service is designed to flawlessly relieve dental pain, swelling, bleeding, or even prevent your dental from deteriorating. Emerdency is the solution you've been waiting for!</p>
+			<p style="color:#292931; font-size:18px" align="justify">Regardless of how cautious you are; dental emergencies can occur at any time. Whether you are having toothache, unusual sensitivity in your mouth, or a facial swelling, you will undoubtedly get the best emergency dental service that will help you alleviate your symptoms. Our emergency dental treatments have the following benefits:
+				<p style="color:#E9531D; font-size:25px; font-weight:900" align="justify"><strong>Emerdency has three main objective when it comes to your <br> urgent dental care</strong></p>
 				<ul>
 					<li>Helps to ease severe dental pain that requires immediate attention</li>
 					<li>Ensures that the affected teeth and surrounding tissue are stabilised to prevent further damage</li>
@@ -211,7 +263,7 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
 				</ul>
 			</p>
 
-			<p><strong>Now, be truthful to yourself:</strong>
+			<!-- <p><strong>Now, be truthful to yourself:</strong>
 				<ul>
 					<li>Is your mouth in severe pain?</li>
 					<li>Can you feel a swelling on your gums?</li>
@@ -221,37 +273,135 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
 				</ul>
 			</p>
 
-			<p>If you answer YES to any of the questions above, then you may likely need to get emergency dental help from a reputable dentist in a clinic near you. Don't know where to go?  Emerdency Dentists have you covered, book an emergency dental appointment with us now!</p>
+			<p>If you answer YES to any of the questions above, then you may likely need to get emergency dental help from a reputable dentist in a clinic near you. Don't know where to go?  Emerdency Dentists have you covered, book an emergency dental appointment with us now!</p> -->
 
-        </div>
-        
-        <div class="row" style="background-color:#f2f2f2;">
-	        <div class="inner-row">
-	            <h2 style="text-align:center;">The Process</h2>
-	            <img src="images/the-process.png" width="100%" height="auto" alt="Emergency Dentist <?php echo $cityloc ?> Process"/>
-	        </div>
 		</div>
-        <div class="inner-row">
+		<div class=" col-md-3"  >
+		<div class="aboutus-img" style="height:400px;">
+			<div class="hero-overlay"  >
+			
+			</div>
+		</div>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+	<div class="col-md-12">
+	<h1 style="text-align: center; color:#E9531D; margin-bottom:70px; margin-top:50px;">Our Emergency Dentists can help you with the following</h1>
+	
+	<div class="col-md-2 services-box" style="margin-left: 50px">
+		<center>
+		<img src="images/services/toac.png" class="img-circle" style="height:200px" />
+		<h3 style="color:white; font-weight:bolder">ToothCare</h3>
+		</center>
+	</div>
+	<div class="col-md-1"></div>
+	<div class="col-md-2 services-box">
+		<center>
+		<img src="images/services/sensitivity.png" class="img-circle" style="height:200px" />
+		<h3 style="color:white; font-weight:bolder">sensitivity</h3>
+		</center>
+	</div>
+	<div class="col-md-1"></div>
+	<div class="col-md-2 services-box">
+		<center>
+		<img src="images/services/brf.png" class="img-circle" style="height:200px" />
+		<h3 style="color:white; font-weight:bolder">Broken filling</h3>
+		</center>
+	</div>
+	<div class="col-md-1"></div>
+	<div class="col-md-2 services-box">
+		<center>
+		<img src="images/services/swa.png" class="img-circle" style="height:200px"/>
+		<h3 style="color:white; font-weight:bolder">Swelling/Abscess</h3>
+		</center>
+	</div>
+	</div>
+	<br>
+    <div class="col-md-12" style="margin-top: 20px">
+	
+	<div class="col-md-2 services-box" style="margin-left: 50px">
+		<center>
+		<img src="images/services/da.png" class="img-circle" style="height:200px" />
+		<h3 style="color:white; font-weight:bolder">Denture Adjustments</h3>
+		</center>
+	</div>
+	<div class="col-md-1"></div>
+	<div class="col-md-2 services-box">
+		<center>
+		<img src="images/services/recrown.png" class="img-circle" />
+		<h3 style="color:white; font-weight:bolder">Re-cement Crowns</h3>
+		</center>
+	</div>
+	<div class="col-md-1"></div>
+	<div class="col-md-2 services-box">
+		<center>
+		<img src="images/services/dtr.png" class="img-circle" />
+		<h3 style="color:white; font-weight:bolder">Dental Trauma</h3>
+		</center>
+	</div>
+	<div class="col-md-1"></div>
+	<div class="col-md-2 services-box">
+		<center>
+		<img src="images/services/pgums.png" class="img-circle" />
+		<h3 style="color:white; font-weight:bolder">Painful Gums</h3>
+		</center>
+	</div>
+	</div>
 
-			<h2>Why Choose Emerdency Dentists?</h2>
 
-			<p>Don't trust anyone but our dentists with your dental emergency. Check out the important reasons why you should book with one of our dentists.</p>
 
-			<p><strong>Excellent Patient Care</strong></p>
+
+
+
+
+        
+        <div class="col-md-12" style="background: #292931; margin-top:40px;">
+           <div class="col-md-12">
+			   <img src="images/whychoosebg.png" 
+			   style="position: absolute;right: 0;height: 500px;margin-top: 100px; opacity: .2;" />
+		   </div>
+		   <br>
+			<h2 style="color:#E9531D; text-align:center">Why Choose Emerdency Dentists?</h2>
+          <br><br><br><br>
+			<!-- <p>Don't trust anyone but our dentists with your dental emergency. Check out the important reasons why you should book with one of our dentists.</p> -->
+         <div class="col-md-5 col-md-offset-2 service-text">
+			<p class="service-heading"><span class="service-number">1</span><strong>Excellent Patient Care</strong></p>
+			<div class="col-md-8">
 			<p>Emerdency puts you first! We care about your dental health and offer a comfortable experience in a relaxed atmosphere. Our team of professional dentists is super-friendly, and always strive to meet your urgent oral needs.</p>
-
-			<p><strong>Transparency and Integrity</strong></p>
-			<p>Emerdency dental service is open and transparent. We will always make sure you are satisfied with the service we provide you. If you need urgent help, we will offer you a quick and direct appointment. Emerdency will make you feel comfortable and in safe hands.</p>
-
-			<p><strong>GDC Certified Specialists</strong></p>
+			</div> 
+		</div>
+		 <div class="col-md-5 service-text">
+		 <p class="service-heading"><span class="service-number">2</span>Transparency and Integrity</strong></p>
+		 <div class="col-md-8">	
+		 <p>Emerdency dental service is open and transparent. We will always make sure you are satisfied with the service we provide you. If you need urgent help, we will offer you a quick and direct appointment. Emerdency will make you feel comfortable and in safe hands.</p>
+		 </div>
+		</div>
+		<div class="col-md-5 col-md-offset-2 service-text">
+		 <p class="service-heading"><span class="service-number">3</span>
+			<strong>GDC Certified Specialists</strong></p>
+			<div class="col-md-8">	
 			<p>All our dentists are duly registered and certified by the General Dental Council, giving you the confidence that they are very capable of providing emergency dental care in accordance with the latest guidleines.</p>
-
-			<p><strong>Wheel Chair Access</strong></p>
-			<p>Are you a patient with mobility concerns? Rejoice, we have you covered! Emerdency offers complete wheelchair access in a number of our clinics.</p>
-
-			<p><strong>Fixed Competitive Price</strong></p>
-			<p>Here at Emerdency, our price is fixed. No price uncertainty, no fluctuations, no hidden charges, or additional fees. We stand by our promise and maintain our excellent reputation. Our payment procedure is simple and straightforward.</p>
-			<p>Our Emergency Dental Services Present:
+			</div>
+		</div>
+		<div class="col-md-5  service-text">
+		 <p class="service-heading"><span class="service-number">4</span><strong>Wheel Chair Access</strong></p>
+		 <div class="col-md-8">	
+		 <p>Are you a patient with mobility concerns? Rejoice, we have you covered! Emerdency offers complete wheelchair access in a number of our clinics.</p>
+		 </div>
+		</div>
+		<br><br>
+		<div class="col-md-12">
+			<div class="col-md-4"></div>
+		<div class="col-md-4  service-text" style="margin-bottom:50px">
+		 <p class="service-heading"><span class="service-number">5</span><strong>Fixed Competitive Price</strong></p>
+		 <div class="col-md-12">
+		 <p>Here at Emerdency, our price is fixed. No price uncertainty, no fluctuations, no hidden charges, or additional fees. We stand by our promise and maintain our excellent reputation. Our payment procedure is simple and straightforward.</p>
+		</div>
+		</div>
+		<div class="col-md-4"></div>
+		</div>
+		<br><br><br><br>
+			<!-- <p>Our Emergency Dental Services Present:
 			<ul>
 				<li>Experienced and Professional Dentists</li>
 				<li>No Price Fluctuations – Fixed Price</li>
@@ -259,38 +409,109 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
 				<li>Comprehensive Telephone Consultation</li>
 				<li>Fast and Easy Appointments</li>
 			</ul>
-			<br>
+			<br> -->
 		</div>
-    <!-- EOF New HP Content -->
-
-		<div class="inner-row">
-            <div class="col-3 shift-right">
-				<h2 style="padding-top: 0px">We Cover The </br>Following Areas</h2>
+		<div class="col-md-12" style="background: #292931; margin-top:0px;">
+           <div class="col-md-12">
+			   <img src="images/ukmap.png" 
+			   style="position: absolute;right: 0;height: 500px;margin-top: 100px; opacity: .2;" />
+		   </div>
+		   <h2 style="color:#E9531D; text-align:center">We Cover The Following Areas</h2>
+		   <br><br><br>
+		   <div class="col-3 shift-right">
+				
 
 			<!-- Areas Covered -->
             <?php include("inc/manchester-locations-HP.php"); ?>
             <!-- EOF Areas covered -->
 			</div>
-			<div class="col-2">
-				<img src="images/map-pic-Northwest.png" width="100%" height="auto" alt="<?php echo $cityloc ?> Emergency Dentist map"/>
-			</div>
-			<div class="col-2">
-				<br>
-			</div>
+			<div style="height:120px; background:#292931" class="col-md-12"></div>
+			
 		</div>
 
-		<div class="inner-row">
-			<div style="width: 100%; float:left;">
-				<h2>Say Goodbye to Dental Pains and Welcome Your Lovely Smiles</h2>
-				<h2>Book an Emergency Dental Appointment with Us TODAY!</h2>
-			</div>
+
+		
+    <!-- EOF New HP Content -->
+
+
+		<div class="row" style="background: #292931; margin-top:0px;">
+		<div  class="col-md-12" style="margin-bottom:40px;">
+				<h2 style="text-align:center; color:#E9531D">The Process</h2>
+				<!-- ***********************Search icon start************** -->
+				<div class="col-md-3">
+			   <div class="col-md-12 process-shape">
+			   <div class="col-md-12 process-icon">
+			   </div>
+			   </div>
+			   <div class="col-md-12">
+				   <h2  style="text-align:center; color:#E9531D; font-weight:900; font-size:40px;"><strong>Search</strong></h2>
+				   <h2  style="text-align:center; color:#fff; font-weight:900; font-size:25px;">Complete Search Criteria</h2>
+			   </div>
+				</div>
+			<!-- ***********************Search icon end************** -->
+			<!-- ***********************Search icon start************** -->
+			<div class="col-md-3">
+			   <div class="col-md-12 process-shape">
+			   <div class="col-md-12 process-icon-select">
+			   </div>
+			   </div>
+			   <div class="col-md-12">
+				   <h2  style="text-align:center; color:#E9531D; font-weight:900; font-size:40px;"><strong>Search</strong></h2>
+				   <h2  style="text-align:center; color:#fff; font-weight:900; font-size:25px;">Complete Search Criteria</h2>
+			   </div>
+				</div>
+			<!-- ***********************Search icon end************** -->
+			<!-- ***********************Search icon start************** -->
+			<div class="col-md-3">
+			   <div class="col-md-12 process-shape">
+			   <div class="col-md-12 process-icon-pay">
+			   </div>
+			   </div>
+			   <div class="col-md-12">
+				   <h2  style="text-align:center; color:#E9531D; font-weight:900; font-size:40px;"><strong>Search</strong></h2>
+				   <h2  style="text-align:center; color:#fff; font-weight:900; font-size:25px;">Complete Search Criteria</h2>
+			   </div>
+				</div>
+			<!-- ***********************Search icon end************** -->
+			<!-- ***********************Search icon start************** -->
+			<div class="col-md-3">
+			   <div class="col-md-12 process-shape">
+			   <div class="col-md-12 process-icon-appointment">
+			   </div>
+			   </div>
+			   <div class="col-md-12">
+				   <h2  style="text-align:center; color:#E9531D; font-weight:900; font-size:40px;"><strong>Search</strong></h2>
+				   <h2  style="text-align:center; color:#fff; font-weight:900; font-size:25px;">Complete Search Criteria</h2>
+			   </div>
+				</div>
+			<!-- ***********************Search icon end************** -->
+			  
+	        </div>
 		</div>
+		
 	</div>
     
     </div>
-    
+    <div class="col-md-12" style=" padding:20px  !important; background: #E9531D; margin-top:-10px;" >
+			<div class="col-md-6 col-md-offset-1" style="">
+				
+				<h2>Book an Emergency Dental Appointment with Us TODAY!</h2>
+				<h2 style="color:white; font-size:50px; font-weight:100">Say Goodbye to your Dental Pain</h2>
+			</div>
+			<div class="col-md-2" style="height:auto;">
+			<div class="col-md-6">
+			<img src="images/btn-background.png" class="img-responsive"
+			   style="position: absolute;  right:0; left:0; top:0; width:100%; opacity: .2;" />
+			   <button class="btn btn-md" style="margin-top:50px; background:#292931; border:1px solid darkgray; right:0; z-index:12129102" >Book Here</button>
+			   </div>
+			 <div class="col-md-6">
+			
+		
+			 </div>
+			</div>
+		</div>
     <!-- Extra Search Facility -->
-    <div class="row no-padding" style="background-color:#f2f2f2;">
+    <!-- <div class="row no-padding" style="background-color:#f2f2f2;">
     	<div class="inner-row">
         
         <div class="col-2">
@@ -326,7 +547,7 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
     <!-- Extra Search Facility -->
    
 
-	<div class="row no-padding">
+	<!-- <div class="row no-padding">
 
 	<div class="row" style="background-image: url(images/emergency-treatments-bg.png); background-size: cover; background-repeat:no-repeat;">
 		<div class="inner-row">
@@ -366,20 +587,66 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
 			</div>
 		</div>
 	</div>
-</div>
-<div class="footer">
-	<div class="row">
-		<div class="inner-row">
-        
-        <div class="col-3">
-			<div class="footer-logo">
-				<img src="../images/logo-transparent.png" width="254" height="127" alt="Emerdency - Emergency Dentist <?php echo $cityloc ?>"/><br/>
-				<a class="privacy" href="../privacy-policy">Privacy Policy</a> |
-                <a class="privacy" href="../cookie-policy">Cookie Policy</a>
+</div> --> 
+<div class="footer col-md-12" style="background: #292931;padding-top:30px;">
+	
+		
+        <div class="col-md-2">
+			<div class="col-md-12 footer-logo">
+				<img src="images/logo-web.jpg" class="img-responsive" alt="Emerdency - Emergency Dentist <?php echo $cityloc ?>"/><br/>
+				
+			</div>
+			<div class="col-md-12 sm-btns-footer">
+			<div class="instagram"><a href="https://www.instagram.com/emerdencyuk/"><span class="fa fa-instagram"></span></a></div>
+            <div class="facebook"><a href="https://www.facebook.com/Emerdency-2055938214617610/"><span class="fa fa-facebook"></span> </a> </div>
+            <div class="twitter"><a href="https://twitter.com/emerdency"><span class="fa fa-twitter"></span></a></div>
 			</div>
         </div>
+<div class="col-md-2">
+<h2 style="color:#E9531D; ">Legal</h2>
 
-        <div class="col-2">
+
+
+<li ><a class="footer-link" href="../privacy-policy">Terms & Conditions</a></li>
+<li ><a class="footer-link" href="../privacy-policy">Privacy Policy</a></li>
+<li> <a class="footer-link" href="../cookie-policy">Cookie Policy</a></li>
+			  
+				
+
+</div>
+<div class="col-md-2">
+<h2 style="color:#E9531D; text-align:center">Quick Links</h2>
+<ul style="color:white;" class="footer-nav">
+				<ul class="footer-nav">
+					<li><a href="../" />HOME</a></li>
+					<li><a href="about.php" />ABOUT US</a></li>
+					<li><a href="fees.php" />FEES</a></li>
+					<li><a href="faq.php" >FAQs</a></li>
+					<li><a href="reviews.php" />REVIEWS</a></li>
+					<li><a href="contact-form.php" />CONTACT</a></li>
+					<li><a href="terms.php" />TERMS AND CONDITIONS</a></li>
+					<li><a href="blog.php" />BLOG</a></li>
+				</ul>
+			</ul>
+</div>
+<div class="col-md-2">
+<h2 style="color:#E9531D; text-align:center">locations</h2>
+<ul class="footer-nav">
+<ul>
+<li><a href="https://www.emerdency.co.uk/emergency-dentists-accrington">Accrington</a></li>
+       
+        <li><a href="https://www.emerdency.co.uk/emergency-dentists-blackburn">Blackburn</a></li>
+        <li><a href="https://www.emerdency.co.uk/emergency-dentists-bolton">Bolton</a></li>
+		<li><a href="https://www.emerdency.co.uk/emergency-dentists-bury">Bury</a></li>
+		<li><a href="https://www.emerdency.co.uk/emergency-dentists-oldham">Oldham</a></li>
+        <li><a href="https://www.emerdency.co.uk/emergency-dentists-rochdale">Rochdale</a></li>
+        <li><a href="https://www.emerdency.co.uk/emergency-dentists-stockport">Stockport</a></li>
+        <li><a href="https://www.emerdency.co.uk/emergency-dentists-wigan">Wigan</a></li>
+
+</ul>
+			</ul>
+</div>
+        <div class="col-md-4" style="padding-bottom: 20px">
             <div class="contact-form">
                 <form method="post" action="contact-form.php">
                     <input placeholder="Email Address" type="email" name="email_address" required />
@@ -390,9 +657,12 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
             </div>
         </div>
             
-		</div>
-	</div>
+		
+	
 </div>
+<div class="col-md-12 sub-footer">
+	<p>EMERGENCY DENTISTS . FIXED PRICE . GDC CERTIFIED DENTISTS . LIVE AVAILABLITY</p>
+	</div>
 </body>
 <script>
     /* Set the width of the side navigation to 500px */
@@ -420,7 +690,8 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
     })();
 </script>
 <!--End of Tawk.to Script-->
-<script src="js/jquery-3.3.1.min.js"></script>
+
+
 <script src="js/cookiepopup.js"></script>
 <script >
     var options = {
@@ -433,4 +704,6 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
     $.acceptCookies(options);
 </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </html>

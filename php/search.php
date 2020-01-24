@@ -2,10 +2,10 @@
 
 session_start();
 
-$path = $_SERVER['DOCUMENT_ROOT'];
-$path .= "/mail/mail.php";
+
+$path= "dentist/nnn/mail/mail.php";
 require_once("$path");
-require_once($_SERVER['DOCUMENT_ROOT']."/includes/functions.php");
+require_once("../includes/functions.php");
 
 
 // Notify Admin (via email) of search with no results

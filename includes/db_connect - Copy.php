@@ -1,9 +1,9 @@
 <?php
 	function dbConnect(){
-		$dbServer = 'nba02whlntki5w2p.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
-  		$dbUsername = 's2hb541w4qgd4xhy';
-   		$dbPassword = 'i0nbrvslkcfjvcxk';
-   		$database= 'k6pxm0qh2379fwk3';
+		$dbServer = '10.169.0.169';
+  		$dbUsername = 'emerdenc_web';
+   		$dbPassword = '?n_qdqBc9C';
+   		$database= 'emerdenc_db';
 		
    		$db = new mysqli($dbServer,$dbUsername, $dbPassword, $database);
     
