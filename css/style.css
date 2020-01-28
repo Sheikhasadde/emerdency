@@ -397,7 +397,7 @@ select.customSelect {
     height: 44px;
     font-size: 20px;
     background-color: #fff;
-    border-radius: 0px!important;
+    
     width: 100%;
     color: grey;
     margin: 10px 0px;
@@ -455,6 +455,15 @@ h3.underline {
     display: inline-block;
     width: 100%;
 }
+.cf-input{
+    background-color: #2A2930 !important;
+   border-color:#e8541c;
+   border-radius: 7px;
+   color:#e8541c;
+}
+.cf-input:focus{
+    background-color: #2A2930 !important;
+}
 
 .autocomplete-items {
     position: absolute;
@@ -503,9 +512,8 @@ input.reg-check {
     padding-right: 15px !important;
 }
 
-.contact-form .col-2 {
-    width: 49%;
-    padding: unset;
+.contact-form{
+   padding: 20px;
 }
 
 
@@ -549,22 +557,39 @@ input[type="number"], input[type="text"], input[type="password"], input[type="da
 .form-holder input {
 	text-align:left;
 }
-
+.page-header{
+    background:url('../images/hero-bg.jpg'); 
+    height: 600px;
+    padding:none;
+    position:absolute !important;
+    margin:0px !important;
+   
+}
 
 .postcode, .distance {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
 }
+.contact-form-container{
+background-color: #2A2930;
+border-radius: 20px;
 
+}
+.bg-dark{
+    background-color: #2A2930;
+    
+}
 
 .page-title {
-	text-align: center;
+	
 color: #fff;
-background-color: #292930;
-margin: 0px;
-padding: 30px;
-font-weight: lighter;
+line-height: 300px;
+position: relative;
+
+font-size: 92px;
+    font-weight: 500;
+    font-family: Montserrat !important;
 }
 
 h1, h2, h3 {
@@ -581,6 +606,9 @@ ul {
 	margin:0px;
 	
 	
+}
+.panel-title h2{
+    font-size:16px !important;
 }
 .main-content li::before {
 	content: "•"; color: #e8541c;

@@ -23,32 +23,48 @@
     include("header.php");
 ?>
 <div class="main-content">
-    <h1 class="page-title">Contact Form</h1>
-    <div class="inner-row">
-        <div class="col-1">
-            <br/>
+<div class="col-md-12 page-header" >
 
-                <span class="error"><?php if($error != ""){echo "<p>{$error}</p>";}?></span>
-                <div class="contact-form">
+</div>
+<div class="col-md-10 col-md-offset-2">
+    <h1 class="page-title">Contact</h1>
+</div>
+    <div class="col-md-12 ">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 contact-form-container">
+           
+<div class="col-md-2"></div>
+<span class="error"><?php if($error != ""){echo "<p>{$error}</p>";}?></span>
+                <div class="col-md-8 contact-form">
+                    <h2  style="color:#e8541c; text-align:center; margin-bottom:20px; ">Get In Touch With Us</h2>
                     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-                        <div class="col-2 first">
-                            <select class="customSelect" name="reason">
+                        <div class="col-md-6 first">
+                            <select class="customSelect cf-input" name="reason">
                                 <option selected disabled>Reason for contacting...</option>
                                 <option value="General Enquiry">General Enquiries</option>
                                 <option value="Complaint">Complaints</option>
                                 <option value="Cancellation">Cancellations</option>
                             </select>
-                            <input placeholder="Name" type="text" name="name" required />
+                            <input placeholder="Name " class="cf-input" type="text" name="name" required />
                         </div>
-                        <div class="col-2">
-                            <input placeholder="Email Address" type="email" name="email_address" required />
-                            <input placeholder="Contact Number" type="number" name="contact_no" min="0" required />
+                        <div class="col-md-6">
+                            <input placeholder="Email Address" type="email" name="email_address" required class="cf-input" />
+                            <input placeholder="Contact Number" type="number" name="contact_no" min="0" required class="cf-input"/>
                         </div>
-                        <textarea class="postcode contactForm" rows="16" maxlength="2000" style="resize:none; white-space: pre-wrap;" name="message" placeholder="Type your message..."></textarea>
-                        <input class="btn" type="submit" value="Contact Us" />
+                       <div class="col-md-12">
+                        <textarea class="postcode contactForm cf-input" rows="16" maxlength="2000" style="resize:none; white-space: pre-wrap;" name="message" placeholder="Type your message..."></textarea>
+                       </div>
+                        <div class="col-md-6">
+                        <input class="btn cf-input" style="border:2px solid #e8541c" type="submit" value="Contact Us" />
+                       </div>
                     </form>
                 </div>
+                <div class="col-md-2"></div>
         </div>
+<div class="col-md-2">
+
+</div>
     </div>
 </div>
-<?php include( 'footer-no-contact.php' ); ?>
+
+<?php include( 'footer.php' ); ?>

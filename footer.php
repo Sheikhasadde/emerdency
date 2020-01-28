@@ -1,32 +1,80 @@
-<div class="footer">
-	<div class="row">
-		<div class="inner-row">
-        
-        <div class="col-3">
-			<div class="footer-logo">
-				<img src="../images/logo-transparent.png" width="254" height="127"/><br/>
-				<a class="privacy" href="../privacy-policy">Privacy Policy</a> |
-                <a class="privacy" href="../cookie-policy">Cookie Policy</a>
+<div class="col-md-12" style=" padding:20px  !important; background: #E9531D; margin-top:-10px;" >
+			<div class="col-md-6 col-md-offset-1" style="">
+				
+				<h2>Book an Emergency Dental Appointment with Us TODAY!</h2>
+				<h2 style="color:white; font-size:50px; font-weight:100">Say Goodbye to your Dental Pain</h2>
+			</div>
+			<div class="col-md-2" style="height:auto;">
+			<div class="col-md-6">
+			<img src="images/btn-background.png" class="img-responsive"
+			   style="position: absolute;  right:0; left:0; top:0; width:100%; opacity: .2;" />
+			   <button class="btn btn-md" style="margin-top:50px; background:#292931; border:1px solid darkgray; right:0; z-index:12129102" >Book Here</button>
+			   </div>
+			 <div class="col-md-6">
+			
+		
+			 </div>
+			</div>
+		</div>
+<div class="footer col-md-12" style="background: #292931;padding-top:30px;">
+	
+		
+        <div class="col-md-2">
+			<div class="col-md-12 footer-logo">
+				<img src="images/logo-web.jpg" class="img-responsive" alt="Emerdency - Emergency Dentist <?php echo $cityloc ?>"/><br/>
+				
+			</div>
+			<div class="col-md-12 sm-btns-footer">
+			<div class="instagram"><a href="https://www.instagram.com/emerdencyuk/"><span class="fa fa-instagram"></span></a></div>
+            <div class="facebook"><a href="https://www.facebook.com/Emerdency-2055938214617610/"><span class="fa fa-facebook"></span> </a> </div>
+            <div class="twitter"><a href="https://twitter.com/emerdency"><span class="fa fa-twitter"></span></a></div>
 			</div>
         </div>
-        
-        <div class="col-3">
-        
-        <p><strong>Locations Covered:</strong></p>
-        <ul>
-            <li><a href="https://www.emerdency.co.uk/emergency-dentists-accrington">Accrington</a></li>
-            <li><a href="https://www.emerdency.co.uk/emergency-dentists-blackburn">Blackburn</a></li>
-            <li><a href="https://www.emerdency.co.uk/emergency-dentists-bolton">Bolton</a></li>
-            <li><a href="https://www.emerdency.co.uk/emergency-dentists-bury">Bury</a></li>
-            <li><a href="https://www.emerdency.co.uk/emergency-dentists-oldham">Oldham</a></li>
-            <li><a href="https://www.emerdency.co.uk/emergency-dentists-rochdale">Rochdale</a></li>
-            <li><a href="https://www.emerdency.co.uk/emergency-dentists-stockport">Stockport</a></li>
-            <li><a href="https://www.emerdency.co.uk/emergency-dentists-wigan">Wigan</a></li>
-        </ul>
-        
-        </div>
+<div class="col-md-2">
+<h2 style="color:#E9531D; ">Legal</h2>
 
-        <div class="col-3">
+
+
+<li ><a class="footer-link" href="../privacy-policy">Terms & Conditions</a></li>
+<li ><a class="footer-link" href="../privacy-policy">Privacy Policy</a></li>
+<li> <a class="footer-link" href="../cookie-policy">Cookie Policy</a></li>
+			  
+				
+
+</div>
+<div class="col-md-2">
+<h2 style="color:#E9531D; text-align:center">Quick Links</h2>
+<ul style="color:white;" class="footer-nav">
+				<ul class="footer-nav">
+					<li><a href="../" />HOME</a></li>
+					<li><a href="about.php" />ABOUT US</a></li>
+					<li><a href="fees.php" />FEES</a></li>
+					<li><a href="faq.php" >FAQs</a></li>
+					<li><a href="reviews.php" />REVIEWS</a></li>
+					<li><a href="contact-form.php" />CONTACT</a></li>
+					<li><a href="terms.php" />TERMS AND CONDITIONS</a></li>
+					<li><a href="blog.php" />BLOG</a></li>
+				</ul>
+			</ul>
+</div>
+<div class="col-md-2">
+<h2 style="color:#E9531D; text-align:center">locations</h2>
+<ul class="footer-nav">
+<ul>
+<li><a href="https://www.emerdency.co.uk/emergency-dentists-accrington">Accrington</a></li>
+       
+        <li><a href="https://www.emerdency.co.uk/emergency-dentists-blackburn">Blackburn</a></li>
+        <li><a href="https://www.emerdency.co.uk/emergency-dentists-bolton">Bolton</a></li>
+		<li><a href="https://www.emerdency.co.uk/emergency-dentists-bury">Bury</a></li>
+		<li><a href="https://www.emerdency.co.uk/emergency-dentists-oldham">Oldham</a></li>
+        <li><a href="https://www.emerdency.co.uk/emergency-dentists-rochdale">Rochdale</a></li>
+        <li><a href="https://www.emerdency.co.uk/emergency-dentists-stockport">Stockport</a></li>
+        <li><a href="https://www.emerdency.co.uk/emergency-dentists-wigan">Wigan</a></li>
+
+</ul>
+			</ul>
+</div>
+        <div class="col-md-4" style="padding-bottom: 20px">
             <div class="contact-form">
                 <form method="post" action="contact-form.php">
                     <input placeholder="Email Address" type="email" name="email_address" required />
@@ -37,9 +85,12 @@
             </div>
         </div>
             
-		</div>
-	</div>
+		
+	
 </div>
+<div class="col-md-12 sub-footer">
+	<p>EMERGENCY DENTISTS . FIXED PRICE . GDC CERTIFIED DENTISTS . LIVE AVAILABLITY</p>
+	</div>
 <script src="../js/jquery.rateit.min.js"></script>
 <script>
     /* Set the width of the side navigation to 500px */
