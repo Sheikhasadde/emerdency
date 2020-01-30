@@ -551,7 +551,10 @@ input[type="number"], input[type="text"], input[type="password"], input[type="da
     padding: 10px 0px;
     font-size: 20px;
     width: 100%;
-	text-align:center;
+    border:none;
+    border-radius:8px;
+    text-align:left;
+    text-indent: 20px;
 }
 
 .form-holder input {
@@ -993,7 +996,12 @@ input.center {
     margin: 0 auto;
     padding-top: 25px;
 }
-
+.cw{
+    color:white;
+}
+.ho{
+    color:#e8541c;
+}
 
 b.orange-dash {
     color: #e8541c;

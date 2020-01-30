@@ -29,18 +29,50 @@
 
     include ("header.php");
 ?>
-<h1 class="page-title">Login</h1>
-<div class="inner-row">
-	<div class="col-1">
+
+<div class="col-md-12 page-header" >
+
+</div>
+<div class="col-md-10 col-md-offset-2">
+    <h1 class="page-title">Login</h1>
+</div>
+<div class="col-md-12">
+	
+<div class="col-md-8 col-md-offset-2 contact-form-container" >
+<div class="col-md-12" style="height:35px;">
+<!-- // Empty space -->
+
+	</div>
+	<div class="col-md-8" ">
     	<span class="error"><?php if($error != ""){echo $error."</br>";}?></span>
         <br/>
 		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-    		<input placeholder="Email Address" type="text" name="email"/> </br>
-        	<input placeholder="Password" type="password" name="password"/> </br>
-        	<button class="btn" type="submit" name="btnLogin">Login</button>
-    	</form>
-   		<a class="btn" href="forgot-password">Forgot your password?</a>
-    	<a class="btn black" href="register">Register</a>
-    </div>
+		<div class="col-md-8 col-md-offset-2">
+			<input placeholder="Email Address" type="text" name="email" class="form-control" style="text-align:left;"/>
+		</div> </br>
+		<div class="col-md-8 col-md-offset-2">
+			<input placeholder="Password" type="password" name="password" class="form-control" style="text-align:left;" /> 
+		</div>
+		</br>
+		<div class="col-md-8 col-md-offset-2">
+			<button class="btn" type="submit" name="btnLogin">Login</button>
+		</div>
+		</form>
+		<div class="col-md-4 col-md-offset-2" style="margin-top:20px">
+		   <a class="ho" href="forgot-password">Forgot your password?</a>
+		</div>
+		<div class="col-md-4 col-md-offset-2" style="margin-top:20px">
+		<a class="ho" href="register">Register</a>
+		</div>
+	</div>
+     <div class="col-md-4">
+		 <img src="images/loginb.png" class="img-responsive" />
+	 </div>
+	 <div class="col-md-12" style="height:35px;">
+<!-- // Empty space -->
+
+	</div>
+
+</div>
 </div>
  <?php include( 'footer.php' ); ?>

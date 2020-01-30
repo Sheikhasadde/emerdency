@@ -22,6 +22,12 @@
 	<link rel="stylesheet" type="text/css" href="../css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/rateit.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+	<link rel="stylesheet" href="../css/bootstrap3.css"> 
+
+
     <link rel="stylesheet" href="../css/accept-cookies.css">
 
     <!-- Google Tag Manager -->
@@ -40,34 +46,53 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPQ3J8C"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div class="top-bar home">FIXED PRICE • GDC CERTIFIED DENTISTS • LIVE AVAILABILITY</div>
-<div class="header">
-    <div class="inner-row">
-        <div class="logo">
-            <a href="../"><img src="../images/logo-web.jpg" width="403" height="199" /></a>
-        </div>
-
-        <div class="sm-btns">
-            <div class="instagram"><a href="https://www.instagram.com/emerdencyuk/"><img src="../images/instagram.png" width="45" height=45"/></a></div>
-            <div class="facebook"><a href="https://www.facebook.com/Emerdency-2055938214617610/"><img src="../images/facebook-logo.png" width="45" height="45" alt="Facebook" /> </a> </div>
-            <div class="twitter"><a href="https://twitter.com/emerdency"><img src="../images/twitter-logo.png" width="45" height="45" alt="Twitter"/></a></div>
-            <div class="contact-details">
+<div class="col-md-12 col-sm-12 hide-xs top-bar index">
+	
+<div class="col-md-6 phonenumber"><span class="glyphicon glyphicon-earphone"></span> &nbsp&nbsp&nbsp           07864 614 694  &nbsp &nbsp &nbsp
+<span class="glyphicon glyphicon-envelope"> </span>     &nbsp &nbsp &nbsp      info@emerdency.co.uk
+</div>
+<div class="col-md-6 sm-btns">
+            <div class="instagram"><a href="https://www.instagram.com/emerdencyuk/"><span class="fa fa-instagram"></span></a></div>
+            <div class="facebook"><a href="https://www.facebook.com/Emerdency-2055938214617610/"><span class="fa fa-facebook"></span> </a> </div>
+            <div class="twitter"><a href="https://twitter.com/emerdency"><span class="fa fa-twitter"></span></a></div>
+            <!-- <div class="contact-details">
                 <a href="tel:07864614694">07864 614 694</a><br/>
                 <a href="mailto:info@emerdency.co.uk">info@emerdency.co.uk</a>
-            </div>
+            </div> -->
         </div>
-        <div class="phonenumber">Call Now: <a href="tel:07864614694">07864 614 694</a><br/><a class="phonenumber" href="mailto:info@emerdency.co.uk">info@emerdency.co.uk</a></div>
+</div>
+<div class="header">
+	<div class="inner-row col-md-12">
+		<div class="logo col-md-2">
+			<a href="../"><img src="images/logo-web.jpg" width="200px" height="100px" alt="Emerdency - Emergency Dentist <?php echo $cityloc ?>" /></a>
+		</div>
+       
+        <div class="main-navigation col-md-6">
+			<ul>
+				<ul>
+					<li><a href="../" />HOME</a></li>
+					<li><a href="about.php" />ABOUT US</a></li>
+					<li><a href="fees.php" />FEES</a></li>
+					<li><a href="faq.php" >FAQs</a></li>
+					<li><a href="reviews.php" />REVIEWS</a></li>
+					<li><a href="contact-form.php" />CONTACT</a></li>
+					<li><a href="terms.php" />TERMS AND CONDITIONS</a></li>
+					<li><a href="blog.php" />BLOG</a></li>
+				</ul>
+			</ul>
+		</div>
+       
 		<?php
-		echo "<div class='login-wrapper'>";
+		echo "<div class='login-wrapper col-md-4'>";
 		switch ($_SESSION["loggedIn"]){
 			case "0" :
-				echo "<div class='patient-login'><a href='../login.php' >PATIENT LOGIN</a></div>";
-				echo "<div class='dentist-login'><a href='../dentist-login.php' >DENTIST LOGIN</a></div>";
-				echo "<div class='register'><a href='../register.php' >REGISTER</a></div>";
+				echo "<div class='patient-login'><a href='login.php' >LOGIN</a></div>";
+				// echo "<div class='dentist-login'><a href='dentist-login.php' >DENTIST LOGIN</a></div>";
+				echo "<div class='register'><a href='register.php' >REGISTER</a></div>";
 				break;
 			case "1" :
-				echo "<div class='dentist-login'><a href='../php/logout.php'>LOG OUT</a></div>";
-				echo "<div class='patient-login'><a href='my-account.php' >MY ACCOUNT</a></div>";
+				echo "<div class='dentist-login'><a href='php/logout.php'>LOG OUT</a></div>";
+				echo "<div class='patient-login'><a href='pages/my-account.php' >MY ACCOUNT</a></div>";
 				if ($_SESSION["incompleteBooking"]) {
 					if ($_SESSION["timestamp"]){
 						$timeNow = time();
@@ -77,51 +102,41 @@
 							unset($_SESSION["timestamp"]);
 							unset($_SESSION["availAppts"]);
 						} else {
-							echo "<div class='confirm'><a class='confirm' href='#bookconfirm'>COMPLETE BOOKING</a></div>";
+							echo "<div class='confirm'><a class='confirm' href='pages/booking-confirmation'>COMPLETE BOOKING</a></div>";
 						}
 					}
 				}
 				break;
 			case "2" :
-				echo "<div class='patient-login'><a href='../php/logout.php' >LOG OUT</a></div>";
-				echo "<div class='dentist-login long'><a href='dentist-account.php' >DENTIST ACCOUNT</a></div>";
+				echo "<div class='patient-login'><a href='php/logout.php' >LOG OUT</a></div>";
+				echo "<div class='dentist-login long'><a href='pages/dentist-account.php' >DENTIST ACCOUNT</a></div>";
 				break;
 			case "3" :
-				echo "<div class='dentist-login'><a href='../php/logout.php' >LOG OUT</a></div>";
-				echo "<div class='register'><a href='admin-account.php' >ADMIN ACCOUNT</a></div>";
+				echo "<div class='dentist-login'><a href='php/logout.php' >LOG OUT</a></div>";
+				echo "<div class='register'><a href='pages/admin-account.php' >ADMIN ACCOUNT</a></div>";
 				break;
 			default:
-				echo "<div class='patient-login'><a href='../login.php' >PATIENT LOGIN</a></div>";
-				echo "<div class='dentist-login'><a href='../dentist-login.php' >DENTIST LOGIN</a></div>";
-				echo "<div class='register'><a href='../register.php' >REGISTER</a></div>";
+				echo "<div class='patient-login'><a href='login.php' >LOGIN</a></div>";
+				// echo "<div class='dentist-login'><a href='dentist-login.php' >DENTIST LOGIN</a></div>";
+				echo "<div class='register'><a href='register.php' >REGISTER</a></div>";
 				break;
 		}
-		echo "<span class='open' onclick=\"openCloseNav()\"><img class='menu-icon' id='menu-btn' src='../images/menu.png'/></span>
+		echo "<span class='open' onclick=\"openCloseNav()\"><img class='menu-icon' id='menu-btn' src='images/menu.png' alt='Menu'/></span>
             <div id=\"mySidenav\" class=\"sidenav\">
                     <a href=\"../\" />HOME</a>
-					<a href=\"../about.php\" />ABOUT US</a>
-					<a href=\"../fees.php\" />FEES</a>
-					<a href=\"../faq.php\" >FAQs</a>
-					<a href=\"../reviews.php\" />REVIEWS</a>
-					<a href=\"../contact-form.php\" />CONTACT</a>
-					<a href=\"../terms.php\" />TERMS AND CONDITIONS</a>
-					<a href=\"../blog.php\" />BLOG</a>
+					<a href=\"about\" />ABOUT US</a>
+					<a href=\"fees\" />FEES</a>
+					<a href=\"faq\" >FAQs</a>
+					<a href=\"reviews\" />REVIEWS</a>
+					<a href=\"contact-form\" />CONTACT FORM</a>
+					<a href=\"terms\" />TERMS AND CONDITIONS</a>
+					<a href=\"blog\" />BLOG</a>
             </div>";
 		echo "</div>";
 		?>
-        <div class="main-navigation">
-            <ul>
-                <ul>
-                    <li><a href="../" />HOME</a></li>
-                    <li><a href="../about.php" />ABOUT US</a></li>
-                    <li><a href="../fees.php" />FEES</a></li>
-                    <li><a href="../faq.php" >FAQs</a></li>
-                    <li><a href="../reviews.php" />REVIEWS</a></li>
-                    <li><a href="../contact-form.php" />CONTACT</a></li>
-                    <li><a href="../terms.php" />TERMS AND CONDITIONS</a></li>
-                    <li><a href="../blog.php" />BLOG</a></li>
-                </ul>
-            </ul>
-        </div>
-    </div>
+		
+	</div>
+</div>
+<div class="introline">
+<p>EMERGENCY DENTISTS . FIXED PRICE . GDC CERTIFIED DENTISTS . LIVE AVAILABLITY</p>
 </div>

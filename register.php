@@ -79,31 +79,61 @@ $description = "Here you can register and benefit from booking appointments onli
 include ("header.php");
 ?>
 <div class="main-content">
-<h1 class="page-title">Register</h1>
-<div class="inner-row">
-<div class="col-1">
+<div class="col-md-12 page-header" >
+
+</div>
+<div class="col-md-10 col-md-offset-2">
+    <h1 class="page-title">Register</h1>
+</div>
+
+<div class="col-md-12">
+<div class="col-md-8 col-md-offset-2 contact-form-container" >
+    <h1 class="cw">Create Your Account</h1>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <br/>
     	<span class="error"><?php if($error != ""){echo $error."<br/>";}?></span>
-            <div class="col-2 register-page">
-                <label>I am registering on behalf of a child (16 years and under): <input type="checkbox" id="trigger" name="minor"/> </label> <br/>
+            <div class="col-md-12 register-page">
+                <label class="cw">  <input type="checkbox" id="trigger" name="minor"/>  I am registering on behalf of a child (16 years and under)</label> <br/>
                 <br/>
-                <label class="orange-text" id="pDetails">Personal Details:</label>
-                <input placeholder="First Name" type="text" name="first_name" required /> </br>
+                <div class="col-md-12">
+                <label class="orange-text" id="pDetails" style="font-size:22px;">Personal Details:</label>
+                </div>
+                <div class="col-md-6">
+                <input placeholder="First Name" type="text"  name="first_name" required  /> </br>
+                </div>
+                <div class="col-md-6">
                 <input placeholder="Last Name" type="text" name="last_name" required /> </br>
+                </div>
+                <div class="col-md-6">
                 <input placeholder="House Number/Name" type="text" name="house_no_name" required /> </br>
+                </div>
+                <div class="col-md-6">
                 <input placeholder="Street/Road" type="text" name="address_line_1" required /> </br>
-                <input placeholder="Address 2" type="text" name="address_line_2" /> </br>
-                <input placeholder="Town/City" type="text" name="town_city" required /> </br>
-                <input placeholder="Postcode" type="text" name="postcode" required /> </br>
-                <label>Date of Birth:</label>
+                </div>
+                <div class="col-md-12">
+                <input placeholder="Address 2" type="text" name="address_line_2" />
+                </div>
+            </br>
+            <div class="col-md-6">
+                <input placeholder="Town/City" type="text" name="town_city" required />
+            </div>
+            </br>
+            <div class="col-md-6">
+                <input placeholder="Postcode" type="text" name="postcode" required />
+            </div> </br>
+            <div class="col-md-12">
+                <label class="ho" style="font-size:22px;">Date of Birth:</label>
+            </div>
+                <div class="col-md-6">
                 <input class="dob" placeholder="yyyy-mm-dd" type="date" name="dob" required min="1900-01-01" max="<?php echo $dateMinus16;?>" /> </br>
+                </div>
+                <div class="col-md-6">
                 <input placeholder="Mobile Number" type="tel" pattern="[0-9]*" min="0" name="contact_no" required /> </br>
+                </div>
             </div>
 
-            <div class="col-2 register-page">
-                <br/>
-                <br/>
+            <div class="col-md-6 register-page">
+                
                 <div id="hidden_fields">
                     <label class="orange-text">Child Details:</label>
                     <input type="text" placeholder="First Name" id="m_firstName" name="m_firstName" />
@@ -111,16 +141,24 @@ include ("header.php");
                     <label>Date of Birth:</label>
                     <input placeholder="yyyy-mm-dd" type="date" name="m_dob" min="<?php echo $dateMinus16;?>" max="<?php echo $dateToday;?>" />
                 </div>
-                <label class="orange-text">Login Details:</label>
+                <label class="orange-text" style="font-size:22px;">Login Details:</label>
                 <input placeholder="Email Address" type="email" name="email_address" required /> </br>
                 <input placeholder="Password" type="password" name="password1" id="password1" required /> </br>
                 <input placeholder="Confirm Password" type="password" name="password2" id="password2" required  /> </br>
-                <div class="register-checkbox">
-                    <input class="reg-check" name="terms" type="checkbox" required /><label class="regCheck">I accept the <a href="terms" target="_blank">terms and conditions</a> </label><br/>
-                    <input class="reg-check" name="details" type="checkbox" required /><label class="regCheck">I confirm I have read and understood section 5.2 of the terms and conditions and agree for my personal data to be shared with dentists carrying out my treatment 			</label><br/>
-                    <input class="reg-check" name="marketing" type="checkbox" /><label class="regCheck">I would like to receive information about products and services by email/telephone/text message </label><br/>
-                    <input class="btn" type="submit" value="Register" />
+               
+            </div>
+            
+            <div class="col-md-6">
+            <div class="register-checkbox">
+                    <input class="reg-check" name="terms" type="checkbox" required /><label class="regCheck ho">I accept the <a href="terms" target="_blank">terms and conditions</a> </label><br/>
+                    <input class="reg-check" name="details" type="checkbox" required /><label class="regCheck ho">I confirm I have read and understood section 5.2 of the terms and conditions and agree for my personal data to be shared with dentists carrying out my treatment 			</label><br/>
+                    <input class="reg-check" name="marketing" type="checkbox" /><label class="regCheck ho">I would like to receive information about products and services by email/telephone/text message </label><br/>
+                
                 </div>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+            <input class="btn" type="submit" value="Register" />
+            <br></br><br><br><br>
             </div>
     </form>
 

@@ -15,9 +15,15 @@ $description = "";
 
 include ("header.php");
 ?>
-<h1 class="page-title">Cookie Policy</h1>
-<div class="inner-row">
-	<div class="col-1">
+
+<div class="col-md-12 page-header" >
+
+</div>
+    <h1 class="page-title">Cookie Policy</h1>
+<div class="col-md-12">
+<div class="col-md-8 col-md-offset-2" style="background:#2A2930; border-radius:20px;">
+    <h1 style="color:white; text-align:center"> Cookie Policy</h1>
+        <div class="col-md-10 col-md-offset-1" style="height:700px; background:white; overflow:scroll; border-radius:20px; margin-bottom:30px;">
 		<p>This is the Cookie Policy for Emerdency accessible from www.emerdency.co.uk.</p>
 
 		<h2>What Are Cookies</h2>
@@ -78,7 +84,7 @@ include ("header.php");
 		<p>However if you are still looking for more information then you can contact us through one of our preferred contact methods:</p>
 
         <p>Email: info@emerdency.co.uk</p>
-
+        </div>
 	</div>
 </div>
 <?php include( 'footer.php' ); ?>

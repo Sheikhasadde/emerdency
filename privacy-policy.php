@@ -1,116 +1,19 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Aamir
- * Date: 06/05/2018
- * Time: 23:53
- */
+    session_start();
 
-session_start();
+    $title = "Privacy Policy | Emerdency";
+    $description = "Emerdency is an emergency dental site, we help you find the emergency dentist for you. Get in touch today to find out more about what we do";
 
+    include("header.php");
 ?>
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/accept-cookies.css">
+<div class="col-md-12 page-header" >
 
-    <title>Patient Data Protection Privacy Policy | Emerdency</title>
-    <meta name="description" content="This privacy policy explains how Emerdency, the emergency dental service gathers, uses, discloses, and manages your data."/>
-
-    <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-WD3L53T');
-    </script>
-    <!-- End Google Tag Manager -->
-</head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WD3L53T"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div class="top-bar">FIXED PRICE • GDC CERTIFIED DENTISTS • LIVE AVAILABILITY</div>
-<div class="header">
-    <div class="inner-row home">
-        <div class="logo">
-            <a href="../"><img src="images/logo-web.jpg" width="403" height="199" /></a>
-        </div>
-
-        <div class="sm-btns">
-            <div class="facebook"><a href="https://www.facebook.com/Emerdency-2101936376749425/"><img src="images/facebook.jpg" width="45" height=45"/></a></div>
-            <div class="twitter"><a href="https://twitter.com/emerdency"><img src="images/twitter.jpg" width="45" height=45"/></a></div>
-        </div>
-		<?php
-		echo "<div class='login-wrapper'>";
-		switch ($_SESSION["loggedIn"]){
-			case "0" :
-				echo "<div class='patient-login'><a href='login' >PATIENT LOGIN</a></div>";
-				echo "<div class='dentist-login'><a href='dentist-login' >DENTIST LOGIN</a></div>";
-				echo "<div class='register'><a href='register' >REGISTER</a></div>";
-				break;
-			case "1" :
-				echo "<div class='dentist-login'><a href='php/logout.php'>LOG OUT</a></div>";
-				echo "<div class='patient-login'><a href='pages/my-account' >MY ACCOUNT</a></div>";
-				if ($_SESSION["incompleteBooking"]) {
-					if ($_SESSION["timestamp"]){
-						$timeNow = time();
-						$timestamp = strtotime($_SESSION["timestamp"]);
-						if ($timeNow > $timestamp){
-							unset($_SESSION["incompleteBooking"]);
-							unset($_SESSION["timestamp"]);
-							unset($_SESSION["availAppts"]);
-						} else {
-							echo "<div class='confirm'><a class='confirm' href='pages/booking-confirmation'>COMPLETE BOOKING</a></div>";
-						}
-					}
-				}
-				break;
-			case "2" :
-				echo "<div class='patient-login'><a href='php/logout.php' >LOG OUT</a></div>";
-				echo "<div class='dentist-login long'><a href='pages/dentist-account' >DENTIST ACCOUNT</a></div>";
-				break;
-			case "3" :
-				echo "<div class='dentist-login'><a href='php/logout.php' >LOG OUT</a></div>";
-				echo "<div class='register'><a href='pages/admin-account' >ADMIN ACCOUNT</a></div>";
-				break;
-			default:
-				echo "<div class='patient-login'><a href='login' >PATIENT LOGIN</a></div>";
-				echo "<div class='dentist-login'><a href='dentist-login' >DENTIST LOGIN</a></div>";
-				echo "<div class='register'><a href='register' >REGISTER</a></div>";
-				break;
-		}
-		echo "<span class='open' onclick=\"openCloseNav()\"><img class='menu-icon' id='menu-btn' src='images/menu.png'/></span>
-            <div id=\"mySidenav\" class=\"sidenav\">
-                    <a href=\"../\" />HOME</a>
-					<a href=\"about\" />ABOUT US</a>
-					<a href=\"fees\" />FEES</a>
-					<a href=\"faq\" >FAQs</a>
-					<a href=\"reviews\" />REVIEWS</a>
-					<a href=\"contact-form\" />CONTACT FORM</a>
-					<a href=\"terms\" />TERMS AND CONDITIONS</a>
-            </div>";
-		echo "</div>";
-		?>
-        <div class="main-navigation">
-            <ul>
-                <ul>
-                    <li><a href="../" />HOME</a></li>
-                    <li><a href="about" />ABOUT US</a></li>
-                    <li><a href="fees" />FEES</a></li>
-                    <li><a href="faq" >FAQs</a></li>
-                    <li><a href="reviews" />REVIEWS</a></li>
-                    <li><a href="contact-form" />CONTACT FORM</a></li>
-                    <li><a href="terms" />TERMS AND CONDITIONS</a></li>
-                </ul>
-            </ul>
-        </div>
-    </div>
 </div>
-<h1 class="page-title">Privacy Policy</h1>
-<div class="inner-row">
-    <div class="col-1">
+    <h1 class="page-title">Privacy Policy</h1>
+<div class="col-md-12">
+<div class="col-md-8 col-md-offset-2" style="background:#2A2930; border-radius:20px;">
+    <h1 style="color:white; text-align:center"> Privacy Policy</h1>
+        <div class="col-md-10 col-md-offset-1" style="height:700px; background:white; overflow:scroll; border-radius:20px; margin-bottom:30px;">
         <p>We are very delighted that you have shown interest in our enterprise. Data protection is of a particularly high priority for the management of Emerdency. The use of the Internet pages of Emerdency is possible without any indication of personal data; however, if a data subject wants to use special enterprise services via our website, processing of personal data could become necessary. If the processing of personal data is necessary and there is no statutory basis for such processing, we generally obtain consent from the data subject.</p>
 
         <p>The processing of personal data, such as the name, address, e-mail address, or telephone number of a data subject shall always be in line with the General Data Protection Regulation (GDPR), and in accordance with the country-specific data protection regulations applicable to Emerdency. By means of this data protection declaration, our enterprise would like to inform the general public of the nature, scope, and purpose of the personal data we collect, use and process. Furthermore, data subjects are informed, by means of this data protection declaration, of the rights to which they are entitled.</p>
@@ -337,7 +240,7 @@ session_start();
 
         <h2>14. Existence of automated decision-making</h2>
         <p>As a responsible company, we do not use automatic decision-making or profiling.</p>
-
+        </div>
 
     </div>
 </div>

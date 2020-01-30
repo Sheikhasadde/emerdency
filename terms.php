@@ -7,9 +7,13 @@
     include("header.php");
 ?>
 <div class="main-content">
+<div class="col-md-12 page-header" >
+
+</div>
     <h1 class="page-title">Terms and Conditions</h1>
-    <div class="inner-row">
-        <div class="col-1">
+    <div class="col-md-8 col-md-offset-2" style="background:#2A2930; border-radius:20px;">
+    <h1 style="color:white; text-align:center"> Terms and Conditions</h1>
+        <div class="col-md-8 col-md-offset-2" style="height:700px; background:white; overflow:scroll; border-radius:20px;">
             <p><strong><p>PLEASE READ THIS AGREEMENT CAREFULLY. ACCESSING OR USING THE SERVICES TOTALLY OR PARTIALLY, OR PAYING FOR THE SERVICES OFFERED BY DENTAL PROFESSIONALS THROUGH THE WEBSITE www.emerdency.co.uk, YOU ACCEPT ALL THE TERMS AND CONDITIONS IN THIS AGREEMENT. ALSO YOU AGREE TO THE PRIVACY POLICY OF EMERDENCY LTD.  YOU ACCEPT THAT THIS AGREEMENT IS LEGALLY BINDING AS ANY OTHER AGREEMENT NEGOTIATED AND SIGNED BY YOU.  IF YOU DO NOT AGREE TO THESE TERMS AND CONDITIONS, YOU ARE ADVISED NOT TO USE THIS SERVICE.</p>
             <p>THE TERMS AND CONDITIONS IN THIS AGREEMENT APPLY TO ANY PARTIAL OR TOTAL USE OF THE SERVICE BY YOU, AND YOU ACCEPT TO BE OBLIGATED BY THESE TERMS AND CONDITIONS INDEPENDENTLY OF THE TYPE OF USE YOU GIVE TO THE SERVICE. This agreement, which may be reformed later is between you and Emerdency LTD (from here on "Emerdency").</strong></p>
             <h2>1. Definitions</h2>
