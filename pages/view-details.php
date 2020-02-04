@@ -8,13 +8,34 @@
  * Description :
  */
 
-include( "../php/patients.php" );
-
 session_start();
 
-$details = getPatientDetailsById($_SESSION["userId"]);
+
+ $details = getPatientDetailsById($_SESSION["userId"]);
 $minor = getAssociatedMinors($_SESSION["userId"]);
 
+function getPatientDetailsById($id){
+	$db = dbConnect();
+	$sql = "SELECT Users.id, Users.email_address, Patient.first_name, Patient.last_name,Patient.house_no_name, Patient.address_line_1, Patient.address_line_2, Patient.town_city, Patient.postcode, Patient.dob, Patient.contact_no
+		  	FROM Patient 
+		  	INNER JOIN Users
+		  		ON Users.id = Patient.id
+		  	WHERE Users.id = '{$id}';";
+	$result = $db->query($sql);
+
+	return $result;
+}
+
+function getAssociatedMinors($id){
+	$db = dbConnect();
+
+	$sql = "SELECT concat(MinorPatient.first_name, ' ',MinorPatient.last_name) AS minorName, MinorPatient.dob 
+			FROM MinorPatient 
+			WHERE parent_id = $id";
+
+	$result = $db->query($sql);
+	return $result;
+}
 if ($details) {
 	if ( mysqli_num_rows( $details ) > 0 ) {
 		while ( $row = mysqli_fetch_assoc( $details ) ) {
@@ -33,16 +54,26 @@ if ($details) {
 	}
 }
 
-include( '../header.php' );
+
 ?>
 
-<div class="main-content">
-	<h1 class="page-title">View Details</h1>
+
+
+
+
+	<h1 class="">View Details</h1>
 	<div class="inner-row">
 		<div class="col-1">
-            <input class="btn back" type="button" value="Back" onclick="window.history.back();">
-            <div class="details-list">
-                <h2>Your Details: </h2>
+            <!-- <input class="btn back" type="button" value="Back" onclick="window.history.back();"> -->
+            
+				
+				<div class="panel panel-default">
+  <div class="panel-heading"><h2>Your Details: </h2></div>
+
+  <div class="panel-body">
+	  
+  <div class="details-list"> 
+  
                 <ul class="appointmentlist details patient-account">
                     <div class="col-3"><h4>Name: </h4><? echo $first_name ." ".$last_name?></div>
                     <div class="col-3"><h4>Date of Birth: </h4><?php echo $dob?></div>
@@ -69,5 +100,7 @@ include( '../header.php' );
 
             </div>
 		</div>
+		</div>
+</div>
 	</div>
-<?php include( '../footer.php' ); ?>
+

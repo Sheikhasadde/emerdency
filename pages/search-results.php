@@ -1,7 +1,7 @@
 <?php
     include( "../includes/functions.php" );
-	include( "../php/search.php" );
-	include( "../php/contact.php" );
+	// include( "../php/search.php" );
+	// include( "../php/contact.php" );
 
 	session_start();
 
@@ -18,11 +18,17 @@
         //unset($_SESSION['availAppts']);
 	}
 
-	include( '../header.php' );
+	include( 'header.php' );
 ?>
-<h1 class="page-title">Appointment with a Dentist</h1>
-<div class="inner-row">
-<div class="col-33">
+
+<div class="col-md-12 page-header-2" >
+
+</div>
+<div class="col-md-12">
+<h2 class="text-left ho">Appointment with a Dentist</h2>
+</div>
+<div class="col-md-12">
+<div class="col-md-8 col-md-offset-2 bg-dark">
     <?php
     /*
     echo "<pre>";
@@ -179,8 +185,8 @@
 	    }
     } elseif ($appts[0] == 0){
         if ($searchParams){
-            echo "<h2>Sorry</h2>";
-            echo "<p>We were unable to find you an appointment. Please try again by adjusting the search parameters or submit your email address and contact number below. We shall contact you as soon as an appointment becomes available.</p>";
+            echo "<h2 class='ho'>Sorry</h2>";
+            echo "<p class='cw'>We were unable to find you an appointment. Please try again by adjusting the search parameters or submit your email address and contact number below. We shall contact you as soon as an appointment becomes available.</p>";
             //echo "<button class='btn black'>Contact</button>";
             if($error2){echo "<span class='error'>{$error2}</br></span>";}
             echo "<form method='post' action=".htmlspecialchars('../php/contact.php').">";
@@ -192,37 +198,41 @@
             echo "</div>";
             echo "<div class='col-2'>";
             echo "<input placeholder='Email Address' type='email' name='email' required />";
-            echo "</div>";
-            echo "<input class='btn black' type='submit' name='searchContact' value='Submit' />";
-            echo "</form>";
+			echo "</div>";
+			echo '<div class="col-md-6 col-md-offset-3">';
+            echo "<input class='btn ' style='background:#e8541c; color:white' type='submit' name='searchContact' value='Submit' />";
+		   echo '</div>';
+			echo "</form>";
         }
     }
 	?>
 </div>
-<div class="col-3">
-    <?php if (count($appts)) {
-	    echo "<img class='imgProcess' src='../images/the-process-select.png'><h3 class='text-centre'>Practice and dentist details will be revealed once the booking has been confirmed</h3>";
-    } else {
-	    echo "<img class='imgProcess' src='../images/the-process-search.png'>";
-    }
- if($error){echo "<span class='error'>{$error}</br></span>";}
-    if($_SESSION["errUnavailable"]){
-        echo "<span class='error'>{$_SESSION["errUnavailable"]}</br></span>"; unset($_SESSION["errUnavailable"]);}
-    ?>
-    <form class="appointment-form" method="post" action="<?php echo htmlspecialchars('../php/search.php');?>">
-        <input class="postcode" type="text" placeholder="Postcode" name="postcode" value="<?php echo $searchParams[0] ?>" required >
+<!-- <div class="col-3">
+	<?php 
+// 	if (count($appts)) {
+// 	    echo "<img class='imgProcess' src='../images/the-process-select.png'><h3 class='text-centre'>Practice and dentist details will be revealed once the booking has been confirmed</h3>";
+//     } else {
+// 	    echo "<img class='imgProcess' src='../images/the-process-search.png'>";
+//     }
+//  if($error){echo "<span class='error'>{$error}</br></span>";}
+//     if($_SESSION["errUnavailable"]){
+//         echo "<span class='error'>{$_SESSION["errUnavailable"]}</br></span>"; unset($_SESSION["errUnavailable"]);}
+	
+	?>
+    <form class="appointment-form" method="post" action="<?php // echo htmlspecialchars('../php/search.php');?>">
+        <input class="postcode" type="text" placeholder="Postcode" name="postcode" value="<?php // echo $searchParams[0] ?>" required >
         <select class="customSelect distance" name="distance" required>
             <option value="" disabled selected>Distance willing to travel</option>
-            <option value="10" <?php if ($searchParams[1] == '10') { echo "selected"; } ?>>10 miles</option>
-            <option value="20" <?php if ($searchParams[1] == '20') { echo "selected"; } ?>>20 miles</option>
-            <option value="30" <?php if ($searchParams[1] == '30') { echo "selected"; } ?>>30 miles</option>
-            <option value="40" <?php if ($searchParams[1] == '40') { echo "selected"; } ?>>40 miles</option>
-            <option value="50" <?php if ($searchParams[1] == '50') { echo "selected"; } ?>>50 miles</option>
+            <option value="10" <?php // if ($searchParams[1] == '10') { echo "selected"; } ?>>10 miles</option>
+            <option value="20" <?php // if ($searchParams[1] == '20') { echo "selected"; } ?>>20 miles</option>
+            <option value="30" <?php //if ($searchParams[1] == '30') { echo "selected"; } ?>>30 miles</option>
+            <option value="40" <?php //if ($searchParams[1] == '40') { echo "selected"; } ?>>40 miles</option>
+            <option value="50" <?php //if ($searchParams[1] == '50') { echo "selected"; } ?>>50 miles</option>
         </select>
-        Wheelchair Access needed: <label><input type="radio" name="disAccess" value="1" required <?php if ($searchParams[2] == '1') { echo "checked='checked'"; } ?> > Yes</label> <label><input type="radio" name="disAccess" value="0" <?php if ($searchParams[2] !== '1') { echo "checked=\"checked\"";}?>> No</label>
+        Wheelchair Access needed: <label><input type="radio" name="disAccess" value="1" required <?php // if ($searchParams[2] == '1') { echo "checked='checked'"; } ?> > Yes</label> <label><input type="radio" name="disAccess" value="0" <?php if ($searchParams[2] !== '1') { echo "checked=\"checked\"";}?>> No</label>
         <input class="btn" type="submit" name="search" value="Search Again">
     </form>
-</div>
+</div> -->
 </div>
     <script src="../js/jquery.rateit.min.js"></script>
-<?php include( '../footer.php' ); ?>
+<?php include( 'footer.php' ); ?>

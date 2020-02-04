@@ -64,7 +64,7 @@
 <div class="header">
 	<div class="inner-row col-md-12">
 		<div class="logo col-md-2">
-			<a href="../"><img src="/images/logo-web.jpg" width="200px" height="100px" alt="Emerdency - Emergency Dentist <?php echo $cityloc ?>" /></a>
+			<a href="../"><img src=" ../images/logo-web.jpg" width="200px" height="100px" alt="Emerdency - Emergency Dentist <?php echo $cityloc ?>" /></a>
 		</div>
        
         <div class="main-navigation col-md-6">

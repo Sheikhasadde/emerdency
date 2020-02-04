@@ -1,13 +1,12 @@
 <?php 	
-	include("../includes/functions.php");
+	//include("../includes/functions.php");	
 	
-	session_start();
 	
-	$email = $resetErr = $success = "";
+	 $email=$resetErr = $success = "";
 
 	// If form has been submitted
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {	
-		$userId = $_SESSION["userId"];
+		
 		
 		$password = $_POST["password1"];
 		$password2 = $_POST["password2"];
@@ -37,23 +36,26 @@
 		}
 	}
 	
-	include('../header.php'); 
+	
 ?>
 
 <div class="main-content">
 
-<h1 class="page-title">Change Password</h1>
-<div class="inner-row">
-<div class="col-1">
+<h1 class="">Change Password</h1>
+<div class="col-md-12">
+<div class="col-md-8 col-md-offset-2">
 	<span class="error"><?php echo $resetErr;?> </span>
     <p>Please enter your new password below :</p>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-        <input placeholder="Password" type="password" name="password1" required /> </br>
-        <input placeholder="Confirm Password" type="password" name="password2" required  /> </br>
-        <input class="btn" type="submit" value="Reset Password" />
+	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+	<div class="col-md-6">
+		<input placeholder="Password" type="password" name="password1" required /></div>
+		<div class="col-md-6">
+        <input placeholder="Confirm Password" type="password" name="password2" required  /></div>
+		<div class="col-md-8 col-md-offset-2">
+		<input class="btn bg-dark" type="submit" value="Reset Password" /></div>
    </form>
 </div>
 </div>
 
 </div>
-<?php include('../footer.php'); ?>
+

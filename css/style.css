@@ -560,11 +560,29 @@ input[type="number"], input[type="text"], input[type="password"], input[type="da
 .form-holder input {
 	text-align:left;
 }
+.tabic{
+    padding:8px;
+}
+.active{
+    border:none !important;
+}
 .page-header{
     background:url('../images/hero-bg.jpg'); 
     height: 600px;
     padding:none;
     position:absolute !important;
+    margin:0px !important;
+   
+}
+.nav-tabs{
+    border:none !important;
+    background-color: #292931;
+}
+.page-header-2{
+    background:url('../images/hero-bg.jpg'); 
+    height: 400px;
+    padding:none;
+   
     margin:0px !important;
    
 }
@@ -610,11 +628,45 @@ ul {
 	
 	
 }
+.panel-default>.panel-heading{
+    background-color: #2A2930 !important;
+    color:white !important;
+    font-size:22px;
+}
+.panel-body{
+    background:#cfcfcf !important;
+    padding:none !important;
+}
+.nav-tabs>li.active>a{
+    color: #fff !important;
+    cursor: default !important;
+    background-color: #e9531d !important;
+    border: 1px solid #e8541c !important;
+    border-bottom-color: transparent !important;
+}
+.nav-tabs>li a:hover{
+    color: #fff !important;
+    cursor: default !important;
+    background-color: #e9531d !important;
+    border: 1px solid #e8541c !important;
+   
+}
+.nav-tabs>li>a{
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    background: #292931;
+    color:white;
+}
+
+
+
 .panel-title h2{
     font-size:16px !important;
 }
 .main-content li::before {
-	content: "•"; color: #e8541c;
+	 color: #e8541c;
 font-size: 19px;
 margin-right:10px;
 }

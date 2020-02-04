@@ -26,15 +26,23 @@
 	include ("header.php");
 ?>
 <div class="main-content">
-	<h1 class="page-title">Forgot Your Password?</h1>
-	<div class="inner-row">
-		<div class="col-1">
+<div class="col-md-12 page-header" >
+
+</div>
+<div class="col-md-10 col-md-offset-2">
+<h1 class="page-title">Forgot Your Password?</h1>
+</div>
+	
+	<div class="col-md-12">
+		<div class="col-md-8 col-md-offset-2 bg-dark">
+			<div class="col-md-8 col-md-offset-2" style="padding:100px;">
 			<span class="error"><?php echo $emailErr;?> </span>
-			<p>Forgot your password? Enter your email address below and follow the instructions in the email to set up a new password. </p>
+			<p class='cw'>Forgot your password? Enter your email address below and follow the instructions in the email to set up a new password. </p>
     		<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
          		<input placeholder="Email" type="email" name="email" required /> </br>
         		<input class="btn" type="submit" value="Reset My Password" />
-  			</form>
+			  </form>
+			</div>
 		</div>
 	</div>
 </div>

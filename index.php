@@ -122,7 +122,7 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
 				echo "<div class='register'><a href='register.php' >REGISTER</a></div>";
 				break;
 			case "1" :
-				echo "<div class='dentist-login'><a href='php/logout.php'>LOG OUT</a></div>";
+				echo "<div class='patient-login'><a href='php/logout.php'>LOG OUT</a></div>";
 				echo "<div class='patient-login'><a href='pages/my-account.php' >MY ACCOUNT</a></div>";
 				if ($_SESSION["incompleteBooking"]) {
 					if ($_SESSION["timestamp"]){
@@ -140,10 +140,10 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
 				break;
 			case "2" :
 				echo "<div class='patient-login'><a href='php/logout.php' >LOG OUT</a></div>";
-				echo "<div class='dentist-login long'><a href='pages/dentist-account.php' >DENTIST ACCOUNT</a></div>";
+				echo "<div class='patient-login long'><a href='pages/dentist-account.php' >DENTIST ACCOUNT</a></div>";
 				break;
 			case "3" :
-				echo "<div class='dentist-login'><a href='php/logout.php' >LOG OUT</a></div>";
+				echo "<div class='patient-login'><a href='php/logout.php' >LOG OUT</a></div>";
 				echo "<div class='register'><a href='pages/admin-account.php' >ADMIN ACCOUNT</a></div>";
 				break;
 			default:

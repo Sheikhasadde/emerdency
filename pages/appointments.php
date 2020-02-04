@@ -8,23 +8,23 @@
  * Description :
  */
 
-require("../includes/db_connect.php");
-include ("../php/appointments.php");
+// require("../includes/db_connect.php");
+// include ("../php/appointments.php");
 
-session_start();
+// session_start();
 
-if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == '1'){
-	$userId = $_SESSION["userId"];
-    $results = getDetails($userId);
-} else {
-	header("Location:../login");
-}
+// if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == '1'){
+// 	$userId = $_SESSION["userId"];
+//     $results = getDetails($userId);
+// } else {
+// 	header("Location:../login");
+// }
 
 
-include "../header.php";
+// include "../header.php";
 
 ?>
-	<h1 class="page-title">Appointments</h1>
+	<h1 class="">Appointments</h1>
 	<div class="inner-row">
 		<div class="col-1">
 			<?php
@@ -46,7 +46,10 @@ include "../header.php";
 					$dateStr = strtotime($row["start_date"]);
 					$date = date('l jS F Y',$dateStr);
 					$time = date('g:i A',$dateStr);
-					echo "<div class='col-1'>";
+					echo "	<div class='panel panel-default'>
+					<div class='panel-heading'><h2>Your Details: </h2></div>
+				  
+					<div class='panel-body'>";
 						    if ($apptType == 2){
 							    echo "<ul class='appointmentlist account tel'>";
 							    echo "<div class='col-1'>";
@@ -108,11 +111,11 @@ include "../header.php";
                         	}
                         }
 					    echo "</ul>";
-					echo "</div>";
+					echo "</div></div>";
                     }
 			} else{
-				echo "<h2>No Appointments have been booked.</h2>";
+				echo "<h2 class='cw'>No Appointments have been booked.</h2>";
 			} ?>
 		</div>
 	</div>
-<?php include('../footer.php'); ?>
+<?php // include('../footer.php'); ?>
