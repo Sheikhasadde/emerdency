@@ -77,12 +77,12 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPQ3J8C"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-<div class="col-md-12 col-sm-12 hide-xs top-bar index">
+<div class="col-md-12 col-sm-12 col-xs-12 hide-xs top-bar index">
 	
-<div class="col-md-6 phonenumber"><span class="glyphicon glyphicon-earphone"></span> &nbsp&nbsp&nbsp           07864 614 694  &nbsp &nbsp &nbsp
+<div class="col-md-4 col-md-offset-2 "><span class="glyphicon glyphicon-earphone"></span> &nbsp&nbsp&nbsp           07864 614 694  &nbsp &nbsp &nbsp
 <span class="glyphicon glyphicon-envelope"> </span>     &nbsp &nbsp &nbsp      info@emerdency.co.uk
 </div>
-<div class="col-md-6 sm-btns">
+<div class="col-md-5 sm-btns">
             <div class="instagram"><a href="https://www.instagram.com/emerdencyuk/"><span class="fa fa-instagram"></span></a></div>
             <div class="facebook"><a href="https://www.facebook.com/Emerdency-2055938214617610/"><span class="fa fa-facebook"></span> </a> </div>
             <div class="twitter"><a href="https://twitter.com/emerdency"><span class="fa fa-twitter"></span></a></div>
@@ -418,7 +418,7 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
 		   </div>
 		   <h2 style="color:#E9531D; text-align:center">We Cover The Following Areas</h2>
 		   <br><br><br>
-		   <div class="col-3 shift-right">
+		   <div class="col-md-12 shift-right">
 				
 
 			<!-- Areas Covered -->
@@ -593,8 +593,8 @@ if(!isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != ''){
 		
         <div class="col-md-2">
 			<div class="col-md-12 footer-logo">
-				<img src="images/logo-web.jpg" class="img-responsive" alt="Emerdency - Emergency Dentist <?php echo $cityloc ?>"/><br/>
-				
+				<center><img src="images/logo-web.jpg" class="img-responsive" alt="Emerdency - Emergency Dentist <?php echo $cityloc ?>"/><br/>
+				</center>
 			</div>
 			<div class="col-md-12 sm-btns-footer">
 			<div class="instagram"><a href="https://www.instagram.com/emerdencyuk/"><span class="fa fa-instagram"></span></a></div>

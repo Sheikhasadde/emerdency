@@ -457,7 +457,7 @@ h3.underline {
 }
 .cf-input{
     background-color: #2A2930 !important;
-   border-color:#e8541c;
+   border-color:#e8541c !important;
    border-radius: 7px;
    color:#e8541c;
 }
@@ -1875,4 +1875,60 @@ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98%);
     display: none;
 }
 
+}
+
+@media only screen and (max-width: 1050px) {
+.sm-btns{
+    display:none;
+}
+.top-bar{
+    padding-bottom: 50px;
+}
+.form-holder-cont{
+    padding:20px;
+    margin:20px;
+}
+.form-holder-cont1{
+    padding:20px;
+    margin:20px;
+}
+.services-box{
+margin:0px !important;
+}
+.process-shape{
+    background-size:20%;
+}
+.process-icon{
+    background-size: 10%;
+
+}
+.process-icon-select{
+    background-size: 10%;
+}
+.process-icon-pay{
+    background-size: 10%;
+}
+.process-icon-appointment{
+    background-size: 10%;
+}
+.sm-btns-footer{
+  width:100%;
+}
+.sidenav{
+    top:65px;
+}
+.page-title{
+    background-color:#2a2930;
+    text-align:center;
+}
+.bg-dark{
+    padding:20px;
+}
+.panel-title h2{
+    font-size:28px !important;
+    font-weight: 200;
+}
+.page-header{
+    position: relative !important;
+}
 }

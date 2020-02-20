@@ -48,7 +48,7 @@
 <!-- End Google Tag Manager (noscript) -->
 <div class="col-md-12 col-sm-12 hide-xs top-bar index">
 	
-<div class="col-md-6 phonenumber"><span class="glyphicon glyphicon-earphone"></span> &nbsp&nbsp&nbsp           07864 614 694  &nbsp &nbsp &nbsp
+<div class="col-md-6 "><span class="glyphicon glyphicon-earphone"></span> &nbsp&nbsp&nbsp           07864 614 694  &nbsp &nbsp &nbsp
 <span class="glyphicon glyphicon-envelope"> </span>     &nbsp &nbsp &nbsp      info@emerdency.co.uk
 </div>
 <div class="col-md-6 sm-btns">
